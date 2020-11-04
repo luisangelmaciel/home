@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Peliculas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab" rel="stylesheet">
+
+<script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-105607247-1', 'auto');
+    ga('send', 'pageview');
+  </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+<style>
+/* Variables */
+/* Reset */
+*,
+::after,
+::before {
+  -webkit-backface-visibility: hidden;
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+::after,
+::before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+::-moz-selection {
+  background-color: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  color: #000;
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  background: #000;
+  color: #121212;
+  font: 16px/1.5 "Raleway", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
+
+/* Loading */
+.loading-icon-container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.loading-icon {
+  height: 350px;
+  width: 250px;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.9);
+  left: 0;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Nav */
+nav ul {
+  display: flex;
+}
+
+nav li {
+  font: 1.5rem/1 "Roboto Slab", serif;
+  padding: 10px 0;
+}
+nav li:first-child {
+  border-right: 1px solid #680403;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+nav a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Day Container */
+/* Date Display Container */
+.date-display-outer-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 1s 0.15s ease;
+  z-index: 2;
+}
+
+.date-display-column-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day-bar-container {
+  display: flex;
+  min-height: 60px;
+}
+
+.date-container {
+  align-items: center;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60px;
+}
+.date-container span {
+  color: #fff;
+  display: block;
+  font-family: "Roboto Slab", serif;
+  line-height: 1em;
+}
+.date-container span:last-child {
+  font-size: 1.5rem;
+}
+
+.theme-container {
+  background: #810504;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font: 1.25rem/1.15 "Roboto Slab", serif;
+  padding: 0 10px;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+/* Arrows */
+.arrow {
+  cursor: pointer;
+  height: 12px;
+  fill: #fff;
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+  width: 12px;
+}
+.arrow:hover {
+  opacity: 0.9;
+}
+
+.is-flipped {
+  transform: rotate(180deg);
+}
+
+/* Primary Container */
+.primary-movie-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  opacity: 0;
+  padding: 0 20px;
+  transition: opacity 1s ease;
+  width: 100%;
+}
+.primary-movie-container:nth-of-type(odd) {
+  margin-top: -100px;
+}
+.primary-movie-container:nth-of-type(even) {
+  margin-top: -75px;
+}
+@media screen and (max-width: 750px) {
+  .primary-movie-container {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 75px;
+  }
+}
+
+.play-icon-container {
+  height: 103px;
+  transition: all 1s ease;
+  width: 103px;
+}
+@media screen and (max-width: 750px) {
+  .play-icon-container {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+}
+
+.play-icon {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.25s ease;
+}
+.play-icon:hover {
+  opacity: 0.9;
+}
+
+/* Movie Card */
+.movie-card-container {
+  max-width: 765px;
+  opacity: 0.95;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+h2 {
+  background: #000;
+  color: #fff;
+  display: block;
+  font: 1.7rem/1 "Roboto Slab", serif;
+  margin-bottom: 2px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  transition: transform 0.75s 0.2s ease;
+  width: 100%;
+}
+
+.movie-details-container {
+  align-items: center;
+  background: #810504;
+  color: #fff;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  transition: transform 0.75s 0.1s ease;
+}
+.movie-details-container span {
+  margin-right: 20px;
+}
+.movie-details-container svg {
+  height: 20px;
+  margin-right: 10px;
+  width: 20px;
+}
+.movie-details-container svg path {
+  fill: rgba(255, 255, 255, 0.9);
+}
+.movie-details-container svg polygon {
+  stroke: rgba(255, 255, 255, 0.9);
+}
+
+.movie-card-content-container {
+  background: #fff;
+  display: flex;
+  padding: 10px 10px;
+  transition: transform 0.75s ease;
+}
+
+.movie-cover-container {
+  margin-right: 10px;
+  max-width: 150px;
+  width: 25%;
+}
+.movie-cover-container img {
+  display: block;
+}
+
+.synopsys-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75%;
+}
+
+/* Trailer */
+.trailer-container {
+  bottom: 0;
+  display: none;
+  left: 0;
+  margin-top: -75px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 1s ease;
+}
+.trailer-container.active {
+  display: block;
+  opacity: 1;
+}
+
+.trailer {
+  height: 100%;
+  width: 100%;
+}
+
+.close-icon {
+  bottom: 75px;
+  cursor: pointer;
+  height: 106px;
+  padding: 10px;
+  opacity: 0.7;
+  position: absolute;
+  left: 1vw;
+  transition: opacity 0.25s ease;
+  width: 106px;
+}
+.close-icon:hover {
+  opacity: 1;
+}
+
+.day-outer-container {
+  background-image: url("http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-loading.svg");
+  background-position: center;
+  background-size: 250px 350px;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: -55px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.day-outer-container:nth-child(odd) {
+  clip-path: polygon(0 0, 100% 75px, 100% calc(100% - 75px), 0 100%);
+  padding-top: 100px;
+}
+.day-outer-container:nth-child(even) {
+  clip-path: polygon(0 75px, 100% 0, 100% 100%, 0 calc(100% - 75px));
+  padding-top: 75px;
+}
+.day-outer-container:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
+  margin-top: 0;
+}
+.day-outer-container:last-child {
+  clip-path: polygon(0 0, 100% 75px, 100% 100%, 0 100%);
+}
+.day-outer-container.loaded .primary-movie-container {
+  opacity: 1;
+}
+.day-outer-container.trailer .day-inner-container {
+  opacity: 0;
+  pointer-events: none;
+}
+.day-outer-container.trailer .date-display-outer-container,
+.day-outer-container.trailer .movie-card-content-container,
+.day-outer-container.trailer .movie-details-container,
+.day-outer-container.trailer h2 {
+  transform: translateX(50vw);
+}
+.day-outer-container.trailer .play-icon-container {
+  opacity: 0;
+  transform: translateX(-50vw);
+}
+
+.day-inner-container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  transition: opacity 1s ease;
+  width: 100%;
+  z-index: 2;
+}
+
+.icons-container {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.stream-icon {
+  height: 34px;
+  filter: grayscale(100%);
+  margin-right: 10px;
+  transition: filter 0.15s ease;
+  width: 34px;
+}
+.stream-icon:hover {
+  filter: none;
+}
+.stream-icon a,
+.stream-icon img {
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .day-outer-container:first-child, .day-outer-container:last-child, .day-outer-container:nth-child(even), .day-outer-container:nth-child(odd) {
+    clip-path: none;
+    height: auto;
+    margin-top: 0;
+    min-height: 100vh;
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .stream-icon {
+    filter: none;
+  }
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+  .day-outer-container:first-child, .day-outer-container:last-child, .day-outer-container:nth-child(even), .day-outer-container:nth-child(odd) {
+    border-bottom: 18px solid #000 !important;
+    clip-path: none !important;
+    margin-top: 0 !important;
+    min-height: 100vh !important;
+    padding: 100px 0 !important;
+  }
+}
+.root {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+  width: 100%;
+}
+</style>
+
+</head>
+<body>
+
+<div class='root'>
+    <header>
+      <div class='container'>
+        <div class='header-container'>
+          <img class='logo' src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/31-nights-of-horror-2017-logo.svg' alt='31 Nights of Horror - 2017' />
+          <nav>
+            <ul>
+              <li>
+                <a href='http://www.danyuschick.com/31-nights-of-horror/' target='_blank'>2016</a>
+              </li>
+              <li>
+                <a href='https://yuschick.github.io/31-Nights-of-Horror-2015/' target='_blank'>2015</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class='loading-icon-container'>
+        <img class='loading-icon' src="http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-loading.svg" alt="Loading" />
+      </div>
+    </main>
+  </div>
+
+  <script id='trailer-template' type='text/x-handlebars-template'>
+    <iframe class='trailer' src="https://www.youtube.com/embed/{{trailer}}?rel=0&amp;controls=0&amp;autoplay=1&amp;showinfo=0?ecver=2" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+    <div class='close-icon'>
+      <img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-close.svg' alt="Close Trailer" />
+    </div>
+  </script>
+
+  <script id='movie-template' type='text/x-handlebars-template'>
+    <section id='{{id}}' class='day-outer-container' data-movie='{{label}}'>
+      <div class='trailer-container'></div>
+      <section class='container day-inner-container'>
+        <div class='date-display-outer-container'>
+          <div class='date-display-column-container'>
+            {{#if arrows.top}}
+            <a href="#{{prev id}}"><svg class='arrow is-flipped' xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 7.6 8.5" xml:space="preserve">
+              <title>Navigation Arrow - Up</title>
+              <description>An arrow icon to navigate to the previous day of the calendar.</description>
+              <path d="M3.6 5.6l0.3 1.3h0l0.3-1.3L6.4 0h1.2L4.1 8.5H3.5L0 0h1.3L3.6 5.6z"></path>
+            </svg></a> {{/if}}
+            <div class='day-bar-container'>
+              <div class='date-container'>
+                <span>Oct</span>
+                <span>{{id}}</span>
+              </div>
+              <div class='theme-container'>
+                <span>{{date.theme}}</span> {{#unless date.happyhalloween}}
+                <span>{{date.day}}</span> {{/unless}} {{#if date.happyhalloween}}
+                <span>{{date.happyhalloween}}</span> {{/if}}
+              </div>
+            </div>
+            {{#if arrows.bottom}}
+            <a href="#{{next id}}"><svg class='arrow' xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 7.6 8.5" xml:space="preserve">
+              <title>Navigation Arrow - Down</title>
+              <description>An arrow icon to navigate to the next day of the calendar.</description>
+              <path d="M3.6 5.6l0.3 1.3h0l0.3-1.3L6.4 0h1.2L4.1 8.5H3.5L0 0h1.3L3.6 5.6z"></path>
+            </svg></a> {{/if}}
+          </div>
+        </div>
+
+        <div class='container primary-movie-container'>
+          <div class='play-icon-container' data-id='{{id}}' data-movie='{{label}}' data-trailer='{{links.trailer}}'>
+            <img class='play-icon' src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-play.svg' alt='Play {{title}} Trailer' />
+          </div>
+          <section class='movie-card-container'>
+            <h2>{{title}}</h2>
+            <div class='movie-details-container'>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background='new 0 0 256 256' xml:space="preserve">
+                <title>Calendar Icon</title>
+                <description>The release date of {{title}} was {{details.release}}</description>
+                <path d="M21,76v158.7c0,5.2,4.2,9.3,9.3,9.3h195.4c5.1,0,9.3-4.2,9.3-9.3V76H21z M76.8,225.3H39.6V188h37.2V225.3z M76.8,178.7H39.6v-37.3h37.2V178.7z M76.8,132H39.6V94.7h37.2V132z M123.4,225.3H86.1V188h37.2V225.3z M123.4,178.7H86.1v-37.3 h37.2V178.7z M123.4,132H86.1V94.7h37.2V132z M169.9,225.3h-37.2V188h37.2V225.3z M169.9,178.7h-37.2v-37.3h37.2V178.7z M169.9,132 h-37.2V94.7h37.2V132z M216.4,225.3h-37.2V188h37.2V225.3z M216.4,178.7h-37.2v-37.3h37.2V178.7z M216.4,132h-37.2V94.7h37.2V132z M235,48.3V67H21V48.3c0-5.1,4.2-9.3,9.3-9.3H67V10h20v29h82V10h20v29h36.7C230.8,39,235,43.2,235,48.3z"/>
+              </svg>
+              <span>{{details.release}}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 20 17.5" xml:space="preserve">
+                <title>Language Icon</title>
+                <description>The language of {{title}} is {{details.language}}</description>
+                <polygon fill='none' stroke-miterlimit='10' stroke-width='2' points="0.5 0.5 0.5 13.5 4.5 13.5 4.5 16.5 8.5 13.5 19.5 13.5 19.5 0.5 "/>
+              </svg>
+              <span>{{details.language}}</span>
+            </div>
+            <div class='movie-card-content-container'>
+              <div class='movie-cover-container'>
+                <img src='http://yuschick.github.io/31-Nights-of-Horror-2017/{{images.cover}}' alt='{{title}} - Movie Cover' />
+              </div>
+              <div class='synopsys-container'>
+                <p>
+                  {{details.description}}
+                </p>
+                <div class='icons-container'>
+                  <div class='stream-icon' data-type='imdb' data-id='{{id}}'>
+                    <a href='http://www.imdb.com/title/{{links.imdb}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-imdb.jpg' alt='View {{title}} on IMDB' /></a>
+                  </div>
+                  {{#if links.amazon}}
+                  <div class='stream-icon' data-type='amazon' data-id='{{id}}'>
+                    <a href='{{links.amazon}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-amazon.jpg' alt='Watch {{title}} on Amazon' /></a>
+                  </div>
+                  {{/if}} {{#if links.hulu}}
+                  <div class='stream-icon' data-type='hulu' data-id='{{id}}'>
+                    <a href='{{links.hulu}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-hulu.jpg' alt='Watch {{title}} on Hulu' /></a>
+                  </div>
+                  {{/if}} {{#if links.netflix}}
+                  <div class='stream-icon' data-type='netflix' data-id='{{id}}'>
+                    <a href='{{links.netflix}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-netflix.jpg' alt='Watch {{title}} on Netflix' /></a>
+                  </div>
+                  {{/if}} {{#if links.shudder}}
+                  <div class='stream-icon' data-type='shudder' data-id='{{id}}'>
+                    <a href='{{links.shudder}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-shudder.jpg' alt='Watch {{title}} on Shudder' /></a>
+                  </div>
+                  {{/if}}{{#if links.youtube}}
+                  <div class='stream-icon' data-type='youtube' data-id='{{id}}'>
+                    <a href='{{links.youtube}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-youtube.jpg' alt='Watch {{title}} on Youtube' /></a>
+                  </div>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </section>
+    </section>
+  </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
+  <script src='https://www.gstatic.com/firebasejs/4.3.1/firebase.js'></script>
+  <script>
+console.clear();
+
+(function () {
+  "use strict";
+
+  const util = {
+    localStorage: {
+      set(prop, value) {
+        localStorage.setItem(prop, JSON.stringify(value));
+      },
+      get(prop) {
+        let data =
+        localStorage[prop] === undefined ?
+        false :
+        JSON.parse(localStorage[prop]);
+        return data;
+      },
+      clear(prop) {
+        localStorage.removeItem(prop);
+        console.log(`${prop} cleared from localStorage.`);
+      } },
+
+    formatString(string) {
+      let label = string.
+      replace(/[0-9]/g, "").
+      replace(/ /g, "-").
+      replace(/'/g, "").
+      replace(/:/g, "");
+      while (label.charAt(0) === "-") {
+        label = label.substr(1);
+      }
+      return label;
+    } };
+
+
+  const trailer = {
+    movie: null,
+    trailer: null,
+
+    removeTrailers() {
+      const trailers = document.querySelectorAll(".trailer-container.active");
+      trailers.forEach(trailer => {
+        trailer.innerHTML = "";
+      });
+    },
+
+    buildTemplate(movieId, trailerId) {
+      const trailerTemplate = document.getElementById("trailer-template");
+      const source = trailerTemplate.innerHTML;
+      const template = Handlebars.compile(source);
+      const context = {
+        trailer: this.trailer };
+
+      const html = template(context);
+
+      this.insertTemplate(html);
+    },
+
+    insertTemplate(html) {
+      const container = document.querySelector(
+      `.day-outer-container[data-movie=${this.movie}]`);
+
+      const trailer = container.querySelector(".trailer-container");
+
+      this.toggleContainerClasses(container);
+
+      trailer.classList.add("active");
+      trailer.innerHTML = html;
+
+      this.bindCloseIcon();
+    },
+
+    toggleContainerClasses(container = null) {
+      const currentActive = document.querySelector(
+      ".day-outer-container.trailer");
+
+      if (currentActive) currentActive.classList.remove("trailer");
+      if (container) container.classList.add("trailer");
+    },
+
+    bindCloseIcon() {
+      const close = document.querySelector(".close-icon");
+      close.addEventListener("click", () => {
+        this.removeTrailers();
+        this.toggleContainerClasses();
+      });
+    },
+
+    init(movieId, trailerId) {
+      this.removeTrailers();
+
+      this.movie = movieId;
+      this.trailer = trailerId;
+
+      this.buildTemplate();
+    } };
+
+
+  const helpers = {
+    init() {
+      Handlebars.registerHelper("next", function (value) {
+        const nextVal = parseInt(value) + 1;
+        return nextVal < 10 ? `0${nextVal}` : nextVal;
+      });
+
+      Handlebars.registerHelper("prev", function (value) {
+        const prevVal = parseInt(value) - 1;
+        return prevVal < 10 ? `0${prevVal}` : prevVal;
+      });
+    } };
+
+
+  const con = {
+    moviesDatabase: null,
+    fetch(table) {
+      return firebase.
+      database().
+      ref(`/${table}/`).
+      once("value").
+      then(data => {
+        return data.val();
+      });
+    },
+
+    post(movieId, type) {
+      let movieData;
+      firebase.
+      database().
+      ref(`/tracking/${movieId - 1}`).
+      once("value").
+      then(data => {
+        movieData = data.val();
+        movieData.tracking[type]++;
+
+        firebase.
+        database().
+        ref(`/tracking/${movieId - 1}`).
+        set(movieData);
+      });
+    },
+
+    init() {
+      const config = {
+        apiKey: "AIzaSyDj19pdN2v4FPRgK89BRHOHUNf4T8eLwKY",
+        authDomain: "horror-calendar-2017.firebaseapp.com",
+        databaseURL: "https://horror-calendar-2017.firebaseio.com",
+        projectId: "horror-calendar-2017",
+        storageBucket: "horror-calendar-2017.appspot.com" };
+
+
+      firebase.initializeApp(config);
+      this.database = firebase.database();
+    } };
+
+  con.init();
+
+  const calendar = {
+    themes: null,
+    movies: null,
+    allContainers: null,
+    id: 1,
+    index: 0,
+
+    fetchMovies() {
+      return con.fetch("movies");
+    },
+
+    fetchThemes() {
+      return con.fetch("themes");
+    },
+
+    loadImage(path, ref) {
+      const img = document.createElement("img");
+      img.src = `http://yuschick.github.io/31-Nights-of-Horror-2017/${path}`;
+
+      img.addEventListener(
+      "load",
+      () => {
+        this.allContainers[ref].style.backgroundImage = `url(http://yuschick.github.io/31-Nights-of-Horror-2017/${path})`;
+        this.allContainers[ref].style.backgroundSize = "cover";
+        this.allContainers[ref].classList.add("loaded");
+      },
+      false);
+
+    },
+
+    buildMovieObject(movie) {
+      movie.id = this.id < 10 ? `0${this.id}` : this.id;
+      movie.label = util.formatString(movie.title);
+
+      movie.date = {};
+      movie.date.theme = this.themes[this.index].theme;
+      movie.date.day = this.themes[this.index].day;
+      movie.date.happyhalloween = this.id === 31 ? "Happy Halloween!" : false;
+
+      movie.arrows = {};
+      movie.arrows.top = this.id === 1 ? false : true;
+      movie.arrows.bottom = this.id === 31 ? false : true;
+
+      return movie;
+    },
+
+    bindEvents() {
+      const playIcons = document.querySelectorAll(".play-icon-container");
+      playIcons.forEach(icon => {
+        icon.addEventListener("click", function () {
+          const movieLabel = this.attributes["data-movie"].value;
+          const trailerId = this.attributes["data-trailer"].value;
+          const movieId = this.attributes["data-id"].value.replace(/^0/, "");
+          trailer.init(movieLabel, trailerId);
+
+          con.post(movieId, "trailer");
+        });
+      });
+
+      const streamIcons = document.querySelectorAll(".stream-icon");
+      streamIcons.forEach(icon => {
+        icon.addEventListener("click", function () {
+          const movieId = this.attributes["data-id"].value;
+          const type = this.attributes["data-type"].value;
+          con.post(movieId, type);
+        });
+      });
+    },
+
+    buildTemplate(context) {
+      const movieTemplate = document.getElementById("movie-template");
+      const source = movieTemplate.innerHTML;
+      const template = Handlebars.compile(source);
+      const html = template(context);
+
+      this.insertTemplate(html);
+    },
+
+    moveToDate() {
+      const rightNow = new Date();
+      const month = rightNow.getMonth();
+
+      if (month === 9) {
+        let date = rightNow.getDate();
+        let section;
+        let pos;
+
+        if (date < 10) {
+          date = `0${date}`;
+        }
+
+        section = document.getElementById(date);
+        pos = section.offsetTop;
+        window.scroll(0, pos - 25);
+      }
+    },
+
+    insertTemplate(html) {
+      const main = document.getElementsByTagName("main")[0];
+      main.innerHTML += html;
+    },
+
+    buildAllMovies() {
+      let html;
+      let containerID;
+
+      this.movies.map(movie => {
+        let context = this.buildMovieObject(movie);
+        this.buildTemplate(context);
+
+        this.allContainers = document.querySelectorAll(".day-outer-container");
+        containerID = this.id - 1;
+        this.loadImage(movie.images.backdrop, containerID);
+
+        this.index++;
+        if (this.index > 6) this.index = 0;
+
+        this.id++;
+      });
+
+      this.moveToDate();
+    },
+
+    init() {
+      Promise.all([this.fetchMovies(), this.fetchThemes()]).then(data => {
+        this.movies = data[0];
+        this.themes = data[1];
+
+        const main = document.getElementsByTagName("main")[0];
+        main.innerHTML = "";
+
+        this.buildAllMovies();
+        this.bindEvents();
+      });
+    } };
+
+
+  helpers.init();
+  calendar.init();
+})();
+</script>
+
+</body>
+</html>
