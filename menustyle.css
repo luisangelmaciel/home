@@ -29,8 +29,8 @@ body {
 .buttons .button {
   display: inline-block;
   overflow: hidden;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: #fff;
   border: 1px solid #efefef;
   border-radius: 1px;
