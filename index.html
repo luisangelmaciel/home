@@ -1,143 +1,104 @@
 <!DOCTYPE html>
-<html lang="es-MX" >
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>CGT ahora es Xiiber Travel</title>
-  
-<link rel="stylesheet" media="screen" href="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/application-1660e6a2643d9f0fe369b8a6091d6e8bffd929fd04eb50990d09cdddc3154e69.css">
-<link href="https://codepen.io/BuddyLReno/pen/aPaMqR" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <style>
 
-<script src="//use.typekit.net/qfq3avj.js"></script>
-<script>try{Typekit.load();}catch(e){}</script><link rel='stylesheet' href='https://codepen.io/BuddyLReno/pen/aPaMqR.css'><link rel="stylesheet" href="./style.css">
-
-<style>
-/********************/
-/* Styles for hero image + shadow + caption */
-
-.hero {
-  position: relative;
-  background-color: #0091D9;
-  z-index: 0;
-  padding-bottom: 80px;
-}
-
-.hero p {
-  font-size: 24px;
-  line-height: 1.5;
-  color: white;
-}
-
-.hero h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 16px;
-  color: white;
-}
-
-.hero-course-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  width: 100vw;
-  max-height: 800px;
-  overflow: hidden;
-}
-
-.container {
-  max-width: 1248px;
-  margin: 10vh auto 0;
-}
-
-@media (min-width: 600px) {
-  .container {
-    margin: 150px auto 0;
-  }
-}
-
-.hero-course-details {
-  padding: 0 24px;
-  max-width: 670px;
-}
-
-.course-logo {
-  height: auto;
-  display: block;
-  max-width: 350px;
-  width: 100%;
-  width: 65vw;
-}
-
-.hero .shadow {
-  background-image: radial-gradient(farthest-side at 73% 21%, transparent, rgb(0, 145, 217));
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-}
-
-
-
-/********************/
-/* Generic Styles that don't matter */
-body {
-  font-family: canada-type-gibson, Arial, sans-serif;
-}
-
-.button-rounded {
-  background-color: white;
-  color: #0091D9;
-  padding: 16px 24px;
-  border-radius: 100px;
-  min-width: 200px;
-  margin: 40px 0;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.2s ease-in-out 0s;
-}
-
-.button-rounded:hover {
-  opacity: .9;
-  text-decoration: none;
-}
-
-
-</style>
-
+    </style>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<main>
-  
-  <div class="hero">
-    <div class="hero-course-image">
-<!--       <img src="https://cdn.ramseysolutions.net/media/ramsey-plus/app/test/course-hero-fpu.jpg"> -->
-      <div class="shadow"></div>
-      <video poster="https://pbs.twimg.com/media/Eh2SlfgWkAAgr6X?format=png&name=360x360" autoPlay="autoPlay" loop="loop" muted="muted" preload="auto" width="100%" objectFit="cover" objectPosition="50% 50%" src="https://www.xiiber.com/alberca01.mp4"/>
-    </div>
-    
-    
-    <div class="container">
-      <div class="hero-course-details">
-        <img class="course-logo" srcset="
-                                         https://pbs.twimg.com/media/Eh2SlfgWkAAgr6X?format=png&name=360x360">
-        <a class="button-rounded" href="http://tepozspa.xiiber.com/">Tepozspa</a>
-         <a class="button-rounded" href="#">CDMX</a>
-         <a class="button-rounded" href="#">Acapulco</a>
-        <h5>Viajes y experiencias para hombres gay</h5>
-        <p>CG Travel ahora es Xiiber Travel </p>
-      </div>
-    </div>
-    
-    
-<!--     <img src="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/slash_8_degrees_blue_40-e548531cfdc986b4c4a3b5aabed791940af41b4790e7f3e90fb48a3c4dcc4dfd.svg">
-   -->
-  </div>
- 
-</main>
 
-  
+<body>
+    <!-- partial:tabs -->
+    <button class="tablink" onclick="openPage('Home', this, '#f2f2f2')"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber" width="28 " height="28 "></button>
+    <button class="tablink" onclick="openPage('News', this, '#f2f2f2')" id="defaultOpen"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber Travel " width="28 " height="28 "></button>
+    <button class="tablink" onclick="openPage('Contact', this, '#f2f2f2')"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber Travel " width="28 " height="28 "></button>
+    <button class="tablink" onclick="openPage('About', this, '#f2f2f2')"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber Travel " width="28 " height="28 "></button>
+
+    <div id="Home" class="tabcontent">
+
+        <iframe src="https://tepozspa.xiiber.com/ " width="100% " height="600 " style="border:none; " text-align="center " title="Bus a Tepozspa "> </iframe>
+    </div>
+
+    <div id="News" class="tabcontent">
+
+        <iframe src="https://www.xiiber.com/home.html " width="100% " height="600 " style="border:none; " text-align="center " title="Home Xiiber "> </iframe>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <iframe src="https://tepozspa.xiiber.com/ " width="100% " height="600 " style="border:none; " text-align="center " title="Google my business "> </iframe>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <iframe src="https://tepozspa.xiiber.com/ " width="100% " height="600 " style="border:none; " text-align="center " title="Google My Business "> </iframe>
+    </div>
+    <!-- partial:tabs -->
+
+    <!-- partialfloating-menu -->
+    <div id="floating-menu">
+        <div id="floating-icon" style="padding: 10px;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="floating-ligar" style="display: block;">
+            <a href="tel:+5215539793727">
+                <svg class="svg-inline--fa fa-phone fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M493.397 24.615l-104-23.997c-11.314-2.611-22.879 3.252-27.456 13.931l-48 111.997a24 24 0 0 0 6.862 28.029l60.617 49.596c-35.973 76.675-98.938 140.508-177.249 177.248l-49.596-60.616a24 24 0 0 0-28.029-6.862l-111.997 48C3.873 366.516-1.994 378.08.618 389.397l23.997 104C27.109 504.204 36.748 512 48 512c256.087 0 464-207.532 464-464 0-11.176-7.714-20.873-18.603-23.385z"></path></svg>
+                <!-- <i class="fas fa-phone"></i> -->
+            </a>
+        </div>
+        <div id="floating-whatsapp" style="display: block;">
+            <a href="https://www.whatsapp.com/catalog/5215539793727?app_absent=" target="_blank">
+                <svg class="svg-inline--fa fa-whatsapp fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="whatsapp" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+                <!-- <i class="fab fa-whatsapp"></i> -->
+            </a>
+        </div>
+        <div id="floating-emergencia" data-toggle="modal" data-target="#modalUrgencia" style="display: block;">
+            <svg class="svg-inline--fa fa-plus fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M448 294.2v-76.4c0-13.3-10.7-24-24-24H286.2V56c0-13.3-10.7-24-24-24h-76.4c-13.3 0-24 10.7-24 24v137.8H24c-13.3 0-24 10.7-24 24v76.4c0 13.3 10.7 24 24 24h137.8V456c0 13.3 10.7 24 24 24h76.4c13.3 0 24-10.7 24-24V318.2H424c13.3 0 24-10.7 24-24z"></path></svg>
+            <!-- <i class="fas fa-plus"></i> -->
+        </div>
+    </div>
+
+    <div id="floating-ligar" style="display: none;">
+        <a href="tel:+5215539793727">
+            <svg class="svg-inline--fa fa-phone fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="+52 1 55 3979 3727" data-fa-i2svg=""><path fill="currentColor" d="M493.397 24.615l-104-23.997c-11.314-2.611-22.879 3.252-27.456 13.931l-48 111.997a24 24 0 0 0 6.862 28.029l60.617 49.596c-35.973 76.675-98.938 140.508-177.249 177.248l-49.596-60.616a24 24 0 0 0-28.029-6.862l-111.997 48C3.873 366.516-1.994 378.08.618 389.397l23.997 104C27.109 504.204 36.748 512 48 512c256.087 0 464-207.532 464-464 0-11.176-7.714-20.873-18.603-23.385z"></path></svg>
+            <!-- <i class="fas fa-phone"></i> -->
+        </a>
+    </div>
+    <div id="floating-whatsapp" style="display: none;">
+        <a href="https://www.whatsapp.com/catalog/5215539793727?app_absent=" target="_blank">
+            <svg class="svg-inline--fa fa-whatsapp fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="whatsapp" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+            <!-- <i class="fab fa-whatsapp"></i> -->
+        </a>
+    </div>
+    <div id="floating-emergencia" data-toggle="modal" data-target="#modalUrgencia" style="display: none;">
+        <svg class="svg-inline--fa fa-plus fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M448 294.2v-76.4c0-13.3-10.7-24-24-24H286.2V56c0-13.3-10.7-24-24-24h-76.4c-13.3 0-24 10.7-24 24v137.8H24c-13.3 0-24 10.7-24 24v76.4c0 13.3 10.7 24 24 24h137.8V456c0 13.3 10.7 24 24 24h76.4c13.3 0 24-10.7 24-24V318.2H424c13.3 0 24-10.7 24-24z"></path></svg>
+        <!-- <i class="fas fa-plus"></i> -->
+    </div>
+
+    <div class="modal fade col-lg-12" id="modalUrgencia" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="fechaModal" data-dismiss="modal">×</button>
+                <h1>.</h1>
+
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partialfloating-menu -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="./script.js"></script>
+
+    <script>
+    </script>
+
 </body>
+
 </html>
