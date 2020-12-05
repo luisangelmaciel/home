@@ -93,7 +93,7 @@ const slides = [{
 
     {
         city: 'CDMX',
-        country: 'Underground,
+        country: 'Underground',
         img: 'https://blog.socialab.com/wp-content/uploads/2015/02/Cd_Mexico_coparmex.jpg'
     },
 
