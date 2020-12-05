@@ -42,7 +42,7 @@ class CitiesSlider extends React.Component {
         const { activeSlide, prevSlide, sliderReady } = this.state;
         return (
             React.createElement("div", { className: classNames('slider', { 's--ready': sliderReady }) },
-                React.createElement("p", { className: "slider__top-heading" }, "Lecturas"),
+                React.createElement("p", { className: "slider__top-heading" }, ""),
                 React.createElement("div", { className: "slider__slides" },
                     this.props.slides.map((slide, index) =>
                         React.createElement("div", {
@@ -75,31 +75,31 @@ class CitiesSlider extends React.Component {
 
 
 const slides = [{
-        city: 'Paris',
-        country: 'France',
-        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/paris.jpg'
+        city: 'Tepozspa',
+        country: 'Tepoztlán, Morelos',
+        img: 'https://tepozspa.xiiber.com/fotos/xiiber-viaje-gay-tepozspa4.jpg'
     },
 
     {
-        city: 'Singapore',
-        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/singapore.jpg'
+        city: 'Acapulco',
+        img: 'https://www.unotv.com/portal/unotv/imagenes/203345-Principal.jpg'
     },
 
     {
-        city: 'Prague',
-        country: 'Czech Republic',
-        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/prague.jpg'
+        city: 'Puerto Vallarta',
+        country: '¿Qué hacer y qué comer?',
+        img: 'https://mk0mexiconewsdam2uje.kinstacdn.com/wp-content/uploads/2020/08/vallarta.jpg'
     },
 
     {
-        city: 'Amsterdam',
-        country: 'Netherlands',
-        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/amsterdam.jpg'
+        city: 'CDMX',
+        country: 'Underground,
+        img: 'https://blog.socialab.com/wp-content/uploads/2015/02/Cd_Mexico_coparmex.jpg'
     },
 
     {
-        city: 'México',
-        country: 'CDMX',
+        city: 'Experiencias',
+        country: 'Actividades interactivas',
         img: 'https://pbs.twimg.com/media/EfwwkDsXgAAd9DM?format=png&name=small'
     }
 ];
