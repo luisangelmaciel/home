@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Calendario 2021</title>
+    <title>Viajes gay en México 2021</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap-grid.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
@@ -15,13 +15,14 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            font-weight: 400;
+            font-weight: 200;
+            background-color: #ffffff(18, 15, 25, 0.25);
         }
         
         h3,
         h4,
         h5 {
-            font-weight: 300 !important;
+            font-weight: 200 !important;
         }
         
         .calendar-wrapper {
@@ -31,17 +32,17 @@
         }
         
         .calendar-header {
-            background-color: rgba(18, 15, 25, 0.25);
+            background-color: #ffffff(18, 15, 25, 0.25);
             height: 100%;
-            padding: 20px;
+            padding: 30px;
             color: #fff;
             font-family: 'Roboto', sans-serif;
-            font-weight: 300;
+            font-weight: 200;
             position: relative;
         }
         
         .header-title {
-            padding-left: 15%;
+            padding-left: 20%;
         }
         
         .header-background {
@@ -53,7 +54,7 @@
         
         .calendar-content {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             padding-left: 15%;
             padding-right: 15%;
             overflow: hidden;
@@ -159,7 +160,7 @@
             background-color: #fff;
             color: black;
             padding: 12px 24px 12px 24px;
-            border-bottom: 1px solid #E5E5E5;
+            border-bottom: 1px solid #ffffff;
             white-space: nowrap;
             position: relative;
             animation: slideInDown 0.5s;
@@ -170,7 +171,7 @@
         }
         
         .eventCard-description {
-            color: grey;
+            color: #ffffff;
         }
         
         .eventCard-mark-wrapper {
@@ -211,7 +212,7 @@
         #table-body .col:hover {
             cursor: pointer;
             /*border: 1px solid grey;*/
-            background-color: #E0E0E0;
+            background-color: white;
         }
         
         .empty-day:hover {
@@ -324,7 +325,7 @@
                 margin-top: 80px;
             }
             .sidebar-wrapper {
-                background-color: #EEEEEE !important;
+                background-color: white !important;
             }
             .sidebar-title {
                 background-color: #5A649C !important;
@@ -357,26 +358,82 @@
                 padding-right: 0;
             }
         }
+        
+        .logo {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            display: block;
+            z-index: 100;
+            transition: all 250ms linear;
+        }
+        
+        .logo img {
+            height: 26px;
+            width: auto;
+            display: block;
+        }
+        
+        a:link {
+            color: #4d4d4d;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: #4d4d4d;
+            ;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #cccccc;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        
+        a:active {
+            color: #4d4d4d;
+            background-color: transparent;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
+
+    <a href="https://www.xiiber.com" class="logo" target="_blank">
+        <img src="https://pbs.twimg.com/media/EobtZjdXEAEMsS8?format=png&name=4096x4096" alt="
+Xiiber Travel ">
+    </a>
+
+
     <div class="mobile-header z-depth-1">
         <div class="row">
-            <div class="col-2"><a href="#" data-activates="sidebar" class="button-collapse" style=""><i class="material-icons">menu</i></a></div>
-            <div class="col">
-                <h4>Xiiber Travel, viajes y experiencias gay</h4>
+            <div class="col-2"><a href="#home" data-activates="sidebar" class="button-collapse" style=""><i class="material-icons">menu</i></a></div>
+            <div class="col" id="home">
+                <img src="https://pbs.twimg.com/media/EgfBvdkUwAEU-Yf?format=png&name=small" alt="Xiiber" width="150" height="35">
             </div>
         </div>
     </div>
     <div class="main-wrapper">
         <div class="sidebar-wrapper z-depth-2 side-nav fixed" id="sidebar">
             <div class="sidebar-title"><img src="https://pbs.twimg.com/media/EgfBvdkUwAEU-Yf?format=png&name=small" alt="Xiiber" width="150" height="35">
-                <h5>Viajes 2021</h5>
                 <h6 id="eventDayName">Fecha</h6>
             </div>
             <div class="sidebar-events" id="sidebarEvents">
-                <div class="empty-message">-Poolparty en Tangas</br>-Poolparty solo para Solteros</div>
+                <div class="empty-message">
+                    <a href="https://cdmx.xiiber.com/" target=" _blank "><b>-Rosca de Reyes</b></a></br>
+                    <a href="https://tepozspa.xiiber.com/" target="_blank">-Poolparty en tangas</a></br>
+                    <a href="#" target="_blank">-Poolparty solo para Solteros</a></br>
+                    <a href="#" target="_blank">-Aniversario Tepoz</a></br>
+                    <a href="https://www.xiiber.com/" target="_blank">-Aniversario Xiiber</a></br>
+                    <a href="#" target="_blank">-Acapulco</a></br>
+                    </br>
+                    <a href="javascript:alert('Pronto volveremos a viajar');">
+                        <i>Pronto volveremos a viajar</i></a>
+                </div>
             </div>
         </div>
         <div class="content-wrapper grey lighten-3">
@@ -410,6 +467,7 @@
                     </div>
                     <div class="calendar-footer">
                         <div class="emptyForm" id="emptyForm">
+                            <a class=" w3-center" href="#"><img src="https://pbs.twimg.com/media/EgfBvdkUwAEU-Yf?format=png&name=small" style="width:80%;"></a>
                             <h4 id="emptyFormTitle">Sin eventos</h4><a class="addEvent" id="changeFormButton">Agregar nuevo</a></div>
                         <div class="addForm" id="addForm">
                             <h4>Agregar evento</h4>
@@ -417,7 +475,7 @@
                                 <div class="input-field col s6"><input id="eventTitleInput" type="text" class="validate"><label for="eventTitleInput">Evento</label></div>
                                 <div class="input-field col s6"><input id="eventDescInput" type="text" class="validate"><label for="eventDescInput">Descripción</label></div>
                             </div>
-                            <div class="addEventButtons"><a class="waves-effect waves-light btn blue lighten-2" id="addEventButton">Agregar</a><a class="waves-effect waves-light btn grey lighten-2" id="cancelAdd">Cancelar</a></div>
+                            <div class="addEventButtons"><a class="waves-effect waves-light btn blue lighten-2" id="addEventButton">Agregar</a><a class="waves-effect waves-light btn grey lighten-2" id="cancelAdd">Cancelar</a></div><br>
                         </div>
                     </div>
                 </div>
@@ -447,7 +505,7 @@
             var monthName = currentDate.toLocaleString("es-MX", {
                 month: "long"
             });
-            var yearNum = currentDate.toLocaleString("en-US", {
+            var yearNum = currentDate.toLocaleString("es-MX", {
                 year: "numeric"
             });
             monthTitle.innerHTML = `${monthName} ${yearNum}`;
@@ -596,10 +654,10 @@
             } else {
                 let emptyMessage = document.createElement("div");
                 emptyMessage.className = "empty-message";
-                emptyMessage.innerHTML = "Sorry, no events to selected date";
+                emptyMessage.innerHTML = "Sin eventos para ese día";
                 sidebarEvents.appendChild(emptyMessage);
                 let emptyFormMessage = document.getElementById("emptyFormTitle");
-                emptyFormMessage.innerHTML = "No events now";
+                emptyFormMessage.innerHTML = "Sin eventos";
             }
         }
 
@@ -686,5 +744,7 @@
         $(".button-collapse").sideNav();
     </script>
 </body>
+
+</html>
 
 </html>
