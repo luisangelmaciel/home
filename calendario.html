@@ -14,6 +14,9 @@
 
     <link rel="icon" href="https://pbs.twimg.com/media/Ejjk19AWAAAvraG?format=png&name=240x240" sizes="192x192">
 
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -36,28 +39,28 @@
         .calendar-header {
             background-color: #ffffff(18, 15, 25, 0.25);
             height: 100%;
-            padding: 30px;
+            padding: 10px;
             color: #fff;
             font-family: 'Roboto', sans-serif;
-            font-weight: 200;
+            font-weight: 100;
             position: relative;
         }
         
         .header-title {
-            padding-left: 20%;
+            padding-left: 10%;
         }
         
         .header-background {
             background-image: url("https://www.dicyt.com/data/45/28945.jpg");
-            height: 200px;
+            height: 150px;
             background-position: center right;
             background-size: cover;
         }
         
         .calendar-content {
             background-color: #fff;
-            padding: 30px;
-            padding-left: 15%;
+            padding: 10px;
+            padding-left: 10%;
             padding-right: 15%;
             overflow: hidden;
         }
@@ -132,15 +135,15 @@
             color: #fff;
             background-color: #5a649c !important;
             padding-top: 0;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
             font-family: 'Roboto', sans-serif;
-            font-weight: 300;
+            font-weight: 100;
             padding-left: 0;
             padding-right: 0;
         }
         
         .sidebar-title {
-            padding: 50px 6% 50px 12%;
+            padding: 40px 6% 40px 12%;
         }
         
         .sidebar-title h4 {
@@ -206,9 +209,9 @@
         }
         
         .content-wrapper {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            margin-left: 300px;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 200px;
         }
         
         #table-body .col:hover {
@@ -400,6 +403,38 @@
             background-color: transparent;
             text-decoration: underline;
         }
+        
+        .footerx {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            color: white;
+            text-align: center;
+        }
+        
+        / dark style original code .icon-bar {
+            width: 100%;
+            background-color: #ffffff;
+            overflow: auto position: fixed;
+        }
+        
+        .icon-bar a {
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 6px 0;
+            transition: all 0.3s ease;
+            color: #bfbfbf;
+            font-size: 28px;
+            background-color: #ffffff;
+        }
+        /* Darker background on mouse-over */
+        
+        .btnslc:hover {
+            background-color: #f2f2f2
+        }
     </style>
 </head>
 
@@ -438,7 +473,7 @@ Xiiber Travel ">
                 </div>
             </div>
         </div>
-        <div class="content-wrapper grey lighten-3">
+        <div class="content-wrapper ">
             <div class="container">
                 <div class="calendar-wrapper z-depth-2">
                     <div class="header-background">
@@ -469,7 +504,7 @@ Xiiber Travel ">
                     </div>
                     <div class="calendar-footer">
                         <div class="emptyForm" id="emptyForm">
-                            <a class=" w3-center" href="#"><img src="https://pbs.twimg.com/media/EgfBvdkUwAEU-Yf?format=png&name=small" style="width:80%;"></a>
+                            <a class=" w3-center" href="#"><img src="https://pbs.twimg.com/media/EgfBvdkUwAEU-Yf?format=png&name=small" style="width:40%;"></a>
                             <h4 id="emptyFormTitle">Sin eventos</h4><a class="addEvent" id="changeFormButton">Agregar nuevo</a></div>
                         <div class="addForm" id="addForm">
                             <h4>Agregar evento</h4>
@@ -484,6 +519,21 @@ Xiiber Travel ">
             </div>
         </div>
     </div>
+
+    <div class="footerx">
+
+        <div class="icon-bar ">
+            <a href="# "><i class=" far fa-calendar-alt "></i></a>
+            <a href="# "><i class="fas fa-gift "></i></a>
+            <a href="https://www.xiiber.com/ "><img src="https://pbs.twimg.com/media/EoaxehFWEAIKLgE?format=jpg&name=4096x4096 " alt="Xiiber Travel " width="39 " height="39 "></i>
+            </a>
+            <a href="# "><i class=" fas fa-suitcase-rolling "></i></a>
+            <a href="#" title=" "><i class=" fas fa-ticket-alt "></i></a>
+        </div>
+
+    </div>
+
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
