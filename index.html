@@ -91,17 +91,94 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
 
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+        bodyex {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            align-content: center;
+        }
+        
+        .text {
+            position: static;
+            width: 100px;
+            left: 0%;
+            margin-left: 0px;
+            height: 0px;
+            top: 0%;
+            margin-top: 0px;
+        }
+        
+        p {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            width: 800px;
+        }
+        
+        .word {
+            position: absolute;
+            width: 800px;
+            opacity: 0;
+        }
+        
+        .letter {
+            display: inline-block;
+            position: relative;
+            float: none;
+            transform: translateZ(25px);
+            transform-origin: 50% 50% 25px;
+        }
+        
+        .letter.out {
+            transform: rotateX(90deg);
+            transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        
+        .letter.behind {
+            transform: rotateX(-90deg);
+        }
+        
+        .letter.in {
+            transform: rotateX(0deg);
+            transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .wisteria {
+            color: #8e44ad;
+        }
+        
+        .belize {
+            color: #2980b9;
+        }
+        
+        .pomegranate {
+            color: #c0392b;
+        }
+        
+        .green {
+            color: #16a085;
+        }
+        
+        .midnight {
+            color: #2c3e50;
+        }
+    </style>
 
 </head>
 
 <body>
+    <!-- Progress -->
+    <div id="progress"></div>
 
     <!-- Logo -->
     <a onclick="document.location='index.html'" class="logo">
         <img src="sgv/ico.svg" alt="Xiiber Travel ">
     </a>
 
-
+    <!-- Spinner -->
+    <div class="spinner-grow spinner-grow-sm"></div>
 
     <div class="w3-container w3-animate-right  ">
         <!-- Alerta roja --><br>
@@ -158,9 +235,7 @@
                                     <p>UNDERGROUND</p>
                                 </div>
                             </a>
-
                         </div>
-
                     </div>
 
                     <!-- Left and right controls -->
@@ -177,65 +252,94 @@
 
             <!-- cardflip2020 -->
             <div class="box-containercardflip2020 ">
-
                 <div class="box-itemcardflip2020 ">
                     <div class="flip-boxcardflip2020 ">
                         <div class="flip-box-frontcardflip2020 text-centercardflip2020 " style="background-image: url( 'https://pbs.twimg.com/media/E06IAnKWQAES87V?format=jpg&name=large'); ">
                             <div class="innercardflip2020 color-whitecardflip2020 ">
-                                <br>
-                                <br> <br><br>
-                                <br> <br><br>
-                                <br> <br>
-                                <br><br> <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png " alt=" " class="flip-box-imgcardflip2020 ">
-
-                                <p>ahora es Xiiber</p>
+                                <br> <br> <br><br> <br> <br><br> <br> <br> <br> <br>
+                                <br><br><br>
+                                <p style="align-content: space-between;">ahora es Xiiber</p>
+                                <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png " alt=" " class="flip-box-imgcardflip2020 ">
                             </div>
                         </div>
-                        <div class="flip-box-backcardflip2020 text-centercardflip2020 " style="background-image: url( 'https://pbs.twimg.com/media/E06IKIHXsAAp3F6?format=jpg&name=large'); ">
+                        <div class="flip-box-backcardflip2020 text-centercardflip2020 " style="background-image: url( 'https://i.pinimg.com/564x/e7/92/e8/e792e81a436129397d48023cd1ec450a.jpg'); ">
                             <div class="innercardflip2020 color-whitecardflip2020 ">
-                                <br>
-                                <br> <br> <br> <br> <br> <br> <br> <br>
-                                <button class="flip-box-buttoncardflip2020 " onclick="document.getElementById('pib1').style.display='block'">Muchas gracias</button>
-                                <h3>9 años viajando juntos</h3>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--Modal cardflip2020 -->
-            <div class="w3-container">
-                <div id="pib1" class="w3-modal">
-                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-                        <header class="w3-container w3-blue">
-                            <span onclick="document.getElementById('pib1').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
-                        </header>
 
-                        <div id="xib1" class="w3-container  w3-center fichaxib">
-                            <img src="https://i.pinimg.com/564x/e7/92/e8/e792e81a436129397d48023cd1ec450a.jpg" " style="width:70%; ">
-                            <!-- Twitter follow -->
-                            
-                                <script>
-                                    ! function(d, s, id) {
-                                        var js, fjs = d.getElementsByTagName(s)[0];
-                                        if (!d.getElementById(id)) {
-                                            js = d.createElement(s);
-                                            js.id = id;
-                                            js.src = "https://platform.twitter.com/widgets.js ";
-                                            fjs.parentNode.insertBefore(js, fjs);
-                                        }
-                                    }(document, "script ", "twitter-wjs ");
-                                </script>
-                            
-                        </div>
+            <!-- text flotante -->
+            <bodyex><br><br>
+                <div class="text">
+                    <p>Experiencias</p>
+                    <p>
+                        <span class="word wisteria">gourmet</span>
+                        <span class="word belize">spa</span>
+                        <span class="word pomegranate">underground</span>
+                        <span class="word green">CDMX</span>
+                        <span class="word midnight">online</span> </div><br><br><br><br>
+                </p>
 
-                        <div class="w3-container w3-light-grey w3-padding ">
-                            <div class="w3-container w3-center ">
-                                <a href="https://twitter.com/xiibertravel " class="twitter-follow-button data-show-count " data-show-count="false " data-size="large " data-dnt="false "> @XiiberTravel</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <script>
+                    var words = document.getElementsByClassName('word');
+                    var wordArray = [];
+                    var currentWord = 0;
+
+                    words[currentWord].style.opacity = 1;
+                    for (var i = 0; i < words.length; i++) {
+                        splitLetters(words[i]);
+                    }
+
+                    function changeWord() {
+                        var cw = wordArray[currentWord];
+                        var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+                        for (var i = 0; i < cw.length; i++) {
+                            animateLetterOut(cw, i);
+                        }
+
+                        for (var i = 0; i < nw.length; i++) {
+                            nw[i].className = 'letter behind';
+                            nw[0].parentElement.style.opacity = 1;
+                            animateLetterIn(nw, i);
+                        }
+
+                        currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+                    }
+
+                    function animateLetterOut(cw, i) {
+                        setTimeout(function() {
+                            cw[i].className = 'letter out';
+                        }, i * 80);
+                    }
+
+                    function animateLetterIn(nw, i) {
+                        setTimeout(function() {
+                            nw[i].className = 'letter in';
+                        }, 340 + (i * 80));
+                    }
+
+                    function splitLetters(word) {
+                        var content = word.innerHTML;
+                        word.innerHTML = '';
+                        var letters = [];
+                        for (var i = 0; i < content.length; i++) {
+                            var letter = document.createElement('span');
+                            letter.className = 'letter';
+                            letter.innerHTML = content.charAt(i);
+                            word.appendChild(letter);
+                            letters.push(letter);
+                        }
+
+                        wordArray.push(letters);
+                    }
+
+                    changeWord();
+                    setInterval(changeWord, 4000);
+                </script>
+            </bodyex>
 
             <!-- Banners 1 y 2 -->
             <div class="media p-3 ">
@@ -286,8 +390,8 @@
                         <div class="ui fluid image " wfd-id="94 ">
                             <div class="ui orange ribbon label " wfd-id="95 ">
                                 <span class="material-icons ">
-                                    catching_pokemon
-                                    </span> Pokemon Go
+                                catching_pokemon
+                                </span> Pokemon Go
                             </div>
                             <a href="pokeperfil.html "> <img src="https://i.pinimg.com/564x/e2/30/ad/e230add5e5f70c41d95358446a3696c2.jpg "></a>
                         </div>
@@ -302,13 +406,15 @@
                     </div>
                 </div>
             </div>
-        
+
+
 
             <!-- Tepozspa en tangas--><br>
             <div class="ui card " wfd-id="183 ">
                 <div class="content " wfd-id="187 ">
 
                     <div class=" right floated ui star rating " data-max-rating="1 "></div><br>
+
 
                     <div class="header " wfd-id="189 ">Tepozspa</div>
                     <div class="description " wfd-id="188 ">
@@ -318,25 +424,24 @@
                                 <div class="ui red ribbon label " wfd-id="95 ">
                                     Sábado, Junio
                                 </div>
-                                <img src="https://i.pinimg.com/564x/2c/57/e0/2c57e05588689ed515d67c4b75783c91.jpg ">
+                                <img src="https://i.pinimg.com/564x/2c/57/e0/2c57e05588689ed515d67c4b75783c91.jpg">
                             </div>
                         </div>
                         <br>
 
-                        <p>Reserva tu lugar con el 50% y liquida el día del viaje, cupo limitado.
+                        <p>Transporte redondo saliendo desde la CDMX a las 9am en punto de metro General anaya.<br> La salida del Tepospa es a las 8:30pm. Reserva con el 50% y el resto puede ser liquidado unos días antes o a la hora de abordar el bus
                             <a href="# " class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
                         </p>
 
-                        <button class="buttonm w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById( 'ticketModallocker').style.display='block' "><span><b>Locker</b> </span>
+                        <button class="buttonm w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById('ticketModallocker').style.display='block'"><span><b>Locker</b> </span>
                             </button>
-                        <button class="buttonm w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById( 'ticketModalvestidor').style.display='block' "><span><b>Vestidor</b> </span></button><br>
+                        <button class="buttonm w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById('ticketModalvestidor').style.display='block'"><span><b>Vestidor</b> </span></button><br>
 
 
                     </div>
                 </div>
-            </div>
-               
 
+            </div>
             <!-- Zona Game --><br>
             <div class="ui unstackable items " wfd-id="126 ">
                 <h2>Para recordar</h2>
@@ -352,10 +457,24 @@
                         <button class="buttonxs w3-border w3-round-large " style="vertical-align:middle " onclick="document.location='telefonos-de-emergencia-y-asistencia-cdmx.html' "><span><b>Ver</b> </span></button><br>
                     </div>
                 </div>
+                <div class="item " wfd-id="134 ">
+                    <div class="image " wfd-id="140 ">
+                        <img src="https://semantic-ui.com/images/wireframe/image.png ">
+                    </div>
+                    <div class="content " wfd-id="135 ">
+                        <a class="header ">Calendarios</a>
+                        <div class="meta " wfd-id="138 ">
+                            <span wfd-id="139 ">Aqui las sesiones fotograficas de los modelos para los calendarios de Xiiber #GayPride</span>
+                        </div>
+                        <button class="buttonxs w3-border w3-round-large " style="vertical-align:middle " onclick="document.location='calendarios.html' "><span><b>Ver</b> </span></button><br>
+                    </div>
+                </div>
             </div>
 
 
-            <!-- Viajes --><hr>
+
+            <!-- Viajes -->
+            <hr>
             <div class="w3-container ">
                 <div class="w3-row-padding w3-padding-64 ">
 
@@ -442,6 +561,8 @@
                 </div>
             </div>
 
+
+
             <!-- Pride -->
             <div class="w3-main w3-container w3-center ">
                 <h1pride>PRIDE</h1pride>
@@ -456,8 +577,8 @@
                             <b> CDMX </b> <a href="https://cdmx.xiiber.com/ "><i class="fas fa-angle-right "></i> </a></td>
                     </tr>
                     <tr>
-                        <td class="w3-safety-yellow w3-center "> 
-                            <b>Puerto Vallarta </b> <a href="https://www.xiiber.com/puertovallarta "><i class="fas fa-angle-right "></i> </a> 
+                        <td class="w3-safety-yellow w3-center ">
+                            <b>Puerto Vallarta </b> <a href="https://www.xiiber.com/puertovallarta "><i class="fas fa-angle-right "></i> </a>
                         </td>
                     </tr>
                     <tr>
@@ -467,113 +588,164 @@
                     </tr>
                     <tr>
                         <td class="w3-safety-blue w3-center ">
-                            <b>Zipolite </b>  <a href="https://www.xiiber.com/zipolite "><i class="fas fa-angle-right "></i> </a>
+                            <b>Zipolite </b> <a href="https://www.xiiber.com/zipolite "><i class="fas fa-angle-right "></i> </a>
                         </td>
                     </tr>
                     <tr>
-                      <td class="w3-safety-purple w3-center ">
-                         <b>Tepozspa </b> <a href="https://tepozspa.xiiber.com/ "><i class="fas fa-angle-right "></i> </a>
-                     </td>
+                        <td class="w3-safety-purple w3-center ">
+                            <b>Tepozspa </b> <a href="https://tepozspa.xiiber.com/ "><i class="fas fa-angle-right "></i> </a>
+                        </td>
                     </tr>
                 </table>
             </div>
-                       
-            
-            
+
+            <!-- Carrusel --><br>
+            <div class="slidercarrusel">
+                <div class="slide-trackcarrusel">
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2VWoAM-_CU?format=png&name=4096x4096" height="100" width="250" alt="Sugar daddy and sugar baby" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2mWkAcrCQO?format=jpg&name=4096x4096" height="100" width="250" alt="Recomendación CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQmXYAIpA2e?format=png&name=4096x4096" height="100" width="250" alt="Viaje en tangas" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZPhWoAIoQq3?format=jpg&name=4096x4096" height="100" width="250" alt="Viajemos todxs por México - color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQ6X0AM03FD?format=png&name=4096x4096" height="100" width="250" alt="Viaje para solteros" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2AXUAEpCBG?format=jpg&name=4096x4096" height="100" width="250" alt="Logo CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv1jX0AIAx_I?format=png&name=4096x4096" height="100" width="250" alt="Veracruz" /></div>
+
+
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2VWoAM-_CU?format=png&name=4096x4096" height="100" width="250" alt="Sugar daddy and sugar baby" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2mWkAcrCQO?format=jpg&name=4096x4096" height="100" width="250" alt="Recomendación CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQmXYAIpA2e?format=png&name=4096x4096" height="100" width="250" alt="Viaje en tangas" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZPhWoAIoQq3?format=jpg&name=4096x4096" height="100" width="250" alt="Viajemos todxs por México - color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQ6X0AM03FD?format=png&name=4096x4096" height="100" width="250" alt="Viaje para solteros" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2AXUAEpCBG?format=jpg&name=4096x4096" height="100" width="250" alt="Logo CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZP8WMAUkhsQ?format=png&name=4096x4096" height="100" width="250" alt="Viaje Para solteros app" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv1jX0AIAx_I?format=png&name=4096x4096" height="100" width="250" alt="Veracruz" /></div>
+
+                </div>
+            </div>
+            <!-- Twitter follow -->
+            <div class="w3-container w3-center">
+                <a href="https://twitter.com/xiibertravel" class="twitter-follow-button data-show-count" data-show-count="false" data-size="large" data-dnt="false"> @XiiberTravel</a>
+                <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                </script>
+            </div>
+
+
             <!--    Ultimo acceso --><br><br>
             <div class="w3-main w3-center ">
+
                 <div>
-                   <p><b>Último acceso</b></p>
+                    <p><b>Último acceso</b></p>
                     <p id="ultimoacceso "></p>
-               </div>
+
+                </div>
             </div>
-        
+            <script>
+                var d = new Date();
+                document.getElementById("ultimoacceso ").innerHTML = d;
+            </script>
+            <!-- Lins footers --><br>
+            <div class="w3-center ">
+                <a class="item " href=" xiibertravel .html ">Sobre Xiiber Travel | </a>
+                <a class="item " href=" politicas.html "> Politicas de privacidad  | </a>
+                <a class="item " href="socialxiib.html ">  Contáctanos   </a>
+            </div>
 
-        <!-- Lins footers --><br>
-        <div class="w3-center ">
-                            <a class="item " href=" xiibertravel .html ">Sobre Xiiber Travel | </a>
-                            <a class="item " href=" politicas.html "> Politicas de privacidad  | </a>
-                            <a class="item " href="socialxiiber.html ">  Contáctanos   </a>
         </div>
-                   
-        </div>
-           
-        <div class="w3-col m3 ">
-                        <p>.</p>
-        </div>
-
     </div>
+
+
+
+
+    <div class="w3-col m3 ">
+        .
+    </div>
+    </div>
+
 
     <br><br><br><br>
 
     <!-- Footerx -->
     <div class="footerx ">
-         <div class="icon-bar ">
-                        <!--     <a href="# "><i class="bi bi-three-dots "  data-toggle="modal " data-target="#modal-fullscreen "></i></a>
-                     <a data-toggle="modal " data-target="#modal-fullscreen "><i class=" fas fa-ticket-alt "></i><p class="w3-small ">Experiencias</p></a> -->
-                        <a onclick="document.location='index.html' "><i class="fas fa-home "></i><p class="w3-small ">Inicio</p></a>
-                        <a onclick="document.location='notificaciones.html' "><i class="bi bi-bell-fill "></i><p class="w3-small ">Notificaciones</p></a>
-                        <a onclick="document.location='viajes.html' "><i class=" fas fa-suitcase-rolling "></i><p class="w3-small ">Viajes</p></a>
-                        <a onclick="document.location='experiencias.html' "><i class=" fas fa-ticket-alt "></i><p class="w3-small ">Experiencias</p></a>
-                        <a onclick="document.location='mesxmes.html' "><i class="bi bi-calendar3 " ></i><p class="w3-small ">Calendario</p></a>
-         </div>
+        <div class="icon-bar ">
+            <!--     <a href="#"><i class="bi bi-three-dots"  data-toggle="modal" data-target="#modal-fullscreen"></i></a>
+                     <a data-toggle="modal" data-target="#modal-fullscreen"><i class=" fas fa-ticket-alt "></i><p class="w3-small ">Experiencias</p></a> -->
+            <a onclick="document.location='index.html'"><i class="fas fa-home"></i><p class="w3-small ">Inicio</p></a>
+            <a onclick="document.location='notificaciones.html'"><i class="bi bi-bell-fill"></i><p class="w3-small ">Notificaciones</p></a>
+            <a onclick="document.location='viajes.html'"><i class=" fas fa-suitcase-rolling "></i><p class="w3-small ">Viajes</p></a>
+            <a onclick="document.location='experiencias.html'"><i class=" fas fa-ticket-alt"></i><p class="w3-small ">Experiencias</p></a>
+            <a onclick="document.location='mesxmes.html'"><i class="bi bi-calendar3" ></i><p class="w3-small ">Calendario</p></a>
+        </div>
     </div>
 
-             <!-- Button floating Modal-Fullscreen -->
-                <button data-toggle="modal " data-target="#modal-fullscreen "> <a class="w3-button w3-circle " style="position:fixed;top:60px;right:40px; "><i class="fas fa-ellipsis-v "></i></a> </button>
-                <!-- Modal-Fullscreen -->
-                <div class="modal fade modal-fullscreen " id="modal-fullscreen " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel " aria-hidden="true ">
-                    <div class="modal-dialog ">
-                        <div class="modal-content ">
-                            <div class="modal-body ">
-                                <button type="button " class="close " data-dismiss="modal " aria-hidden="true ">&times;</button>
-                                <iframe src="secciones.html " " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
-                        </div>
-                    </div>
+    <!-- Button floating Modal-Fullscreen -->
+    <button data-toggle="modal" data-target="#modal-fullscreen"> <a class="w3-button  w3-circle  " style="position:fixed;top:60px;right:40px; "><i class="fas fa-ellipsis-v"></i></a> </button>
+    <!-- Modal-Fullscreen -->
+    <div class="modal fade modal-fullscreen" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <iframe src="secciones.html " " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
                 </div>
+            </div>
+        </div>
+    </div>
 
 
-                <script>
-                    var d = new Date();
-                    document.getElementById("ultimoacceso ").innerHTML = d;
-                </script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip "]').tooltip();
+        });
 
-                <script>
-                    $(document).ready(function() {
-                        $('[data-toggle="tooltip "]').tooltip();
-                    });
+        $(document).ready(function() {
+            $('.toast').toast('show');
+        });
 
-                    $(document).ready(function() {
-                        $('.toast').toast('show');
-                    });
-
-                    $(document).ready(function() {
-                        $('[data-toggle="popover "]').popover();
-                    });
+        $(document).ready(function() {
+            $('[data-toggle="popover "]').popover();
+        });
 
 
-                    $('.ui.rating').rating({
-                        initialRating: 3,
-                        maxRating: 5
-                    });
+        $('.ui.rating').rating({
+            initialRating: 3,
+            maxRating: 5
+        });
 
-                    $(document).ready(function() {
-                        $('.toast').toast('show');
-                    });
+        $(document).ready(function() {
+            $('.toast').toast('show');
+        });
 
-                    $(document).ready(function() {
-                        $('.toast').toast({
-                            autohide: false
-                        });
-                        $('.toast').toast('show');
-                    });
-                </script>
+        $(document).ready(function() {
+            $('.toast').toast({
+                autohide: false
+            });
+            $('.toast').toast('show');
+        });
+    </script>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="./progress.js "></script>
+    <script src="./acordion.js "></script>
+    <script src="./agotado.js "></script>
+    
 
-                <script src="./progress.js "></script>
-                <script src="./acordion.js "></script>
-                <script src="./agotado.js "></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
-</html>
+    <script src="./progress.js "></script>
+    <script src="./acordion.js "></script>
+    <script src="./agotado.js "></script>
+    
+    
+ </html>
