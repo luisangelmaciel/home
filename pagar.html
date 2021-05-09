@@ -283,90 +283,84 @@
 
                                 <table align="" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                                     <tr>
-                                        <!-- tabs  -->
+                                        <!-- nuevo-->
+
+                                        <!-- fin nuevo -->
+                                        <!-- tabs -->
                                         <h2 class="w3-center">Opciones de pago</h2>
                                         <div class="w3-border w3-auto">
                                             <div class="w3-bar w3-blue-gray">
                                                 <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-gray" onclick="openCity(event,'spei')">Transferencia Interbancaria</button>
-                                                <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-gray " onclick="openCity(event,'Paris')">Clip</button>
-                                                <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-gray" onclick="openCity(event,'Tokyo')">Tokyo</button>
-                                                <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-gray" onclick="openCity(event,'pago')">Tokyo</button>
+                                                <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-gray " onclick="openCity(event,'clip')">Clip</button>
+                                                <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-gray" onclick="openCity(event,'oxxo')">Oxxo</button>
                                             </div>
 
                                             <div id="spei" class="w3-container city w3-animate-opacity  w3-animate-right  w3-auto ">
-
-                                                <div class="w3-col  w3-left-align  w3-auto" style="width:50%">
-                                                    <p> Banco receptor </p>
-                                                    <p> Nombre receptor <i class="fa fa-clone" onclick="myFunctionz()"></i></p>
-                                                    <p> CLABE Interbancaria <i class="fa fa-clone" onclick="myFunction()"></i> </p>
-                                                    <p> Tarjeta de débito <i class="fa fa-clone" onclick="tarjetadebito()"></i> </p>
-                                                    <p> Número de cuenta <i class="fa fa-clone" onclick="numcuenta()"></i></p>
-
+                                                <div class="w3-container w3-centered">
+                                                    <p> Banco receptor<b> Banco Azteca </b> </p><br>
+                                                    <div class="w3-col  w3-left-align  w3-auto" style="width:50%">
+                                                        <p> Nombre receptor <i class="fa fa-clone" onclick="myFunctionz()"></i></p>
+                                                        <p> CLABE Interbancaria <i class="fa fa-clone" onclick="myFunction()"></i> </p>
+                                                        <p> Tarjeta de débito <i class="fa fa-clone" onclick="tarjetadebito()"></i> </p>
+                                                        <p> Número de cuenta <i class="fa fa-clone" onclick="numcuenta()"></i></p>
+                                                    </div>
+                                                    <div class="w3-col w3-left-align w3-auto " style="width:50%">
+                                                        <input type="text" value="Luis Angel Maciel Padilla" id="myInput2">
+                                                        <input type="text" value="1271 8001 3324 6288 22 " id="myInput1" class="w3-margin-top">
+                                                        <input type="text" value="4027 6657 4930 1926 " id="debito" class="w3-margin-top">
+                                                        <input type="text" value="2545 1332 4628 82 " id="cuenta" class="w3-margin-top">
+                                                    </div>
+                                                    <br><br> <br><br> <br><br> <br><br>
+                                                    <script>
+                                                        function numcuenta() {
+                                                            var copyText = document.getElementById("cuenta");
+                                                            copyText.select();
+                                                            copyText.setSelectionRange(0, 99999)
+                                                            document.execCommand("copy");
+                                                            alert("Número de cuenta copiada " + copyText.value);
+                                                        }
+                                                    </script>
+                                                    <script>
+                                                        function tarjetadebito() {
+                                                            var copyText = document.getElementById("debito");
+                                                            copyText.select();
+                                                            copyText.setSelectionRange(0, 99999)
+                                                            document.execCommand("copy");
+                                                            alert("Tarjeta de débito copiada " + copyText.value);
+                                                        }
+                                                    </script>
+                                                    <script>
+                                                        function myFunction() {
+                                                            var copyText = document.getElementById("myInput1");
+                                                            copyText.select();
+                                                            copyText.setSelectionRange(0, 99999)
+                                                            document.execCommand("copy");
+                                                            alert("Copiada la CLABE " + copyText.value);
+                                                        }
+                                                    </script>
+                                                    <script>
+                                                        function myFunctionz() {
+                                                            var copyText = document.getElementById("myInput2");
+                                                            copyText.select();
+                                                            copyText.setSelectionRange(0, 99999)
+                                                            document.execCommand("copy");
+                                                            alert("Copiado el nombre receptor " + copyText.value);
+                                                        }
+                                                    </script>
                                                 </div>
-
-                                                <div class="w3-col w3-left-align  w3-auto" style="width:50%">
-                                                    <p> <b>Banco Azteca </b></p>
-                                                    <input type="text" value="Luis Angel Maciel Padilla" id="myInput2"><br>
-                                                    <input type="text" value="1271 8001 3324 6288 22 " id="myInput1"><br>
-                                                    <input type="text" value="4027 6657 4930 1926 " id="debito"><br>
-                                                    <input type="text" value="2545 1332 4628 82 " id="cuenta">
-                                                </div>
-
-                                                <script>
-                                                    function numcuenta() {
-                                                        var copyText = document.getElementById("cuenta");
-                                                        copyText.select();
-                                                        copyText.setSelectionRange(0, 99999)
-                                                        document.execCommand("copy");
-                                                        alert("Número de cuenta copiada " + copyText.value);
-                                                    }
-                                                </script>
-                                                <script>
-                                                    function tarjetadebito() {
-                                                        var copyText = document.getElementById("debito");
-                                                        copyText.select();
-                                                        copyText.setSelectionRange(0, 99999)
-                                                        document.execCommand("copy");
-                                                        alert("Tarjeta de débito copiada " + copyText.value);
-                                                    }
-                                                </script>
-                                                <script>
-                                                    function myFunction() {
-                                                        var copyText = document.getElementById("myInput1");
-                                                        copyText.select();
-                                                        copyText.setSelectionRange(0, 99999)
-                                                        document.execCommand("copy");
-                                                        alert("Copiada la CLABE " + copyText.value);
-                                                    }
-                                                </script>
-                                                <script>
-                                                    function myFunctionz() {
-                                                        var copyText = document.getElementById("myInput2");
-                                                        copyText.select();
-                                                        copyText.setSelectionRange(0, 99999)
-                                                        document.execCommand("copy");
-                                                        alert("Copiado el nombre receptor " + copyText.value);
-                                                    }
-                                                </script>
                                             </div>
 
-                                            <div id="Paris" class="w3-container city w3-animate-opacity">
-                                                <h2>Paris</h2>
-                                                <p>Paris is the capital of France.</p>
-                                                <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+                                            <div id="clip" class="w3-container city w3-animate-opacity">
+                                                <h2>Tarjetas de crédito y debito</h2>
+
                                             </div>
 
-                                            <div id="Tokyo" class="w3-container city w3-animate-opacity">
-                                                <h2>Tokyo</h2>
-                                                <p>Tokyo is the capital of Japan.</p>
-                                                <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+                                            <div id="oxxo" class="w3-container city w3-animate-opacity">
+                                                <h2>Oxxo</h2>
+
                                             </div>
 
-                                            <div id="pago" class="w3-container city w3-animate-opacity">
-                                                <h2>Tokyo</h2>
-                                                <p>Tokyo is the capital of Japan.</p>
-                                                <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-                                            </div>
+
 
                                         </div>
 
