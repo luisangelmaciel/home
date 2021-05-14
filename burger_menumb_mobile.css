@@ -1,0 +1,257 @@
+.bodymb {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 25px;
+    z-index: 1;
+}
+
+
+/*Burger-menubm*/
+
+.menubm {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 25px;
+    z-index: 3;
+}
+
+.menubm span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+
+.menubm span:before,
+.menubm span:after {
+    position: absolute;
+    content: '';
+}
+
+.menubm span,
+.menubm span:before,
+.menubm span:after {
+    width: 30px;
+    height: 6px;
+    background-color: black;
+    display: block;
+}
+
+.menubm span:before {
+    margin-top: -12px;
+}
+
+.menubm span:after {
+    margin-top: 12px;
+}
+
+
+/*Fake-Trigger*/
+
+#sizedmb {
+    width: 60px;
+    height: 50px;
+    color: transparent;
+    background-color: transparent;
+    border: transparent;
+}
+
+
+/*modalmb-Box*/
+
+.modalmb {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 0.5%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modalmb-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 98vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background-color: #FFF0A5;
+}
+
+.modalmb-header {
+    padding: 2px 16px;
+    background-color: #FFF0A5;
+    border-bottom: none;
+    height: 35vh;
+}
+
+.modalmb-body {
+    padding: 2px 16px;
+    background-color: #FFF0A5;
+}
+
+.modalmb-footer {
+    padding: 2px 16px;
+    background-color: #FFF0A5;
+    color: black;
+    border-top: none;
+    text-align: center;
+}
+
+.modalmb-footer hr {
+    margin-top: 20vh;
+}
+
+.modalmb-footer>p {
+    color: #468966
+}
+
+.modalmb-footer h3 {
+    text-transform: none;
+    font-size: 4vh;
+}
+
+.close {
+    color: #468966;
+    float: left;
+    font-size: 5em;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #B64926;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+.animated {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+/*navmbigation Inner Styling*/
+
+.navmb ul li a:hover {
+    text-decoration: none;
+    color: #B64926;
+}
+
+.navmb ul li a {
+    padding: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3vw;
+    letter-spacing: -0.05em;
+}
+
+.navmb ul li {
+    display: inline-block;
+    font-size: 3em;
+}
+
+.navmb ul {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Mobile Optimization*/
+
+
+/* Portrait Tablet to Landscape and Desktop */
+
+@media (min-width:768px) and (max-width:979px) {
+    .navmb ul li {
+        display: block;
+        height: 45px;
+    }
+    .navmb ul {
+        clear: both;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .navmb ul li a {
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 6vw;
+        letter-spacing: -0.05em;
+    }
+}
+
+
+/* Landscape-Phone to Portrait Tablet*/
+
+@media (max-width:767px) {
+    .navmb ul li {
+        display: block;
+        height: 38px;
+    }
+    .navmb ul {
+        clear: both;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .navmb ul li a {
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 6vw;
+        letter-spacing: -0.05em;
+    }
+}
+
+
+/*Landscape-Phone Downwards*/
+
+@media (max-width: 480px) {
+    .navmb ul li {
+        display: block;
+        height: 38px;
+    }
+    .navmb ul {
+        clear: both;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .navmb ul li a {
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 10vw;
+        letter-spacing: -0.05em;
+    }
+}

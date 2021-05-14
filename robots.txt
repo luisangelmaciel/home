@@ -1,0 +1,10 @@
+user-agent: googlebot-news
+disallow: /pagar
+
+user-agent: *
+disallow: /pagar
+
+user-agent: googlebot-news
+disallow: /pagar
+    
+Sitemap: http://www.xiiber.com/sitemap.xml
