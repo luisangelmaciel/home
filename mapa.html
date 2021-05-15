@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FAQ Accordion</title>
+    <title>Mapa de sitio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -123,19 +123,126 @@
             color: #000;
         }
         
-        .a {
+        a:hover,
+        a:focus,
+        .btn:hover,
+        .btn:focus,
+        button:hover,
+        button:focus {
             text-decoration: none;
-            color: #000;
+            outline: none;
+        }
+        
+        .new_footer_top .f_widget.about-widget .f_list li a:hover {
+            color: #000000;
+        }
+        
+        .new_footer_top .f_widget.about-widget .f_list li {
+            margin-bottom: 11px;
+        }
+        
+        .f_widget.about-widget .f_list li:last-child {
+            margin-bottom: 0px;
+        }
+        
+        .f_widget.about-widget .f_list li {
+            margin-bottom: 15px;
+        }
+        
+        .f_widget.about-widget .f_list {
+            margin-bottom: 0px;
+        }
+        
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #050505;
+            border-color: #080808;
+            color: #fff;
+        }
+        
+        .btn_get_two:hover {
+            background: transparent;
+            color: #020202;
+        }
+        
+        .new_footer_top .f_social_icon a:hover {
+            background: #000000;
+            border-color: #000000;
+            color: white;
+        }
+        
+        .new_footer_top .f_social_icon a+a {
+            margin-left: 4px;
+        }
+        
+        .new_footer_top .f-title {
+            margin-bottom: 30px;
+            color: #263b5e;
+        }
+        
+        .f_600 {
+            font-weight: 600;
+        }
+        
+        .f_size_18 {
+            font-size: 18px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #050505;
+        }
+        
+        .new_footer_top .f_widget.about-widget .f_list li a {
+            color: #000000;
         }
     </style>
-
+    <style type="text/css" media="screen">
+        A:link {
+            text-decoration: none
+        }
+        
+        A:visited {
+            color: black;
+            text-decoration: none
+        }
+        
+        A:hover {
+            color: black;
+            font-family: arial;
+            text-decoration: none
+        }
+        
+        * {
+            outline: none !important;
+        }
+        
+        *:focus {
+            outline: none !important;
+        }
+        
+        textarea:focus,
+        input:focus {
+            outline: none !important;
+        }
+        
+        a {
+            text-decoration: none !important;
+            outline: none !important;
+        }
+    </style>
 </head>
 
 <body>
 
     <main class="card">
         <div class="hero">
-            <img src="https://www.xiiber.com/fotos/logo_xiiber_travel_v1.png" alt="section image" class="img" style="width:20%">
+            <img src="https://www.xiiber.com/fotos/logo_xiiber_travel_v1.png" alt="section image" class="img" style="width:50%">
         </div>
 
 
@@ -143,47 +250,47 @@
 
             <button class="acc-btn">Viajes</button>
             <div class="acc-content">
-
-                <ul class="list-unstyled f_list" style="text-decoration:none">
-                    <a href="viajes/acapulco.html" style="text-decoration:none">
-                        <li>▸ Acapulco </li>
-                    </a>
-                    <a href="viajes/puertovallarta.html" style="text-decoration:none">
-                        <li>▸ Puerto Vallarta </li>
-                    </a>
-                    <a href="viajes/zipolite.html" style="text-decoration:none">
-                        <li>▸ Zipolite </li>
-                    </a>
-                    <a href="viajes/veracruz.html#" style="text-decoration:none">
-                        <li>▸ Veracruz </li>
-                    </a>
-                    <li><a href="viajes/tepoztlan.html" style="text-decoration:none">Tepoztlan</a></li>
-                    <li><a href="viajes/rutagastronomica.html" style="text-decoration:none">Ruta Gastronómica</a> <br> <br>
+                <ul class="list-unstyled f_list">
+                    <li><a href="viajes/acapulco.html ">Acapulco</a></li>
+                    <li><a href="viajes/puertovallarta.html">Puerto Vallarta</a></li>
+                    <li><a href="viajes/zipolite.html">Zipolite</a></li>
+                    <li><a href="viajes/veracruz.html#">Veracruz</a></li>
+                    <li><a href="viajes/tepoztlan.html">Tepoztlan</a></li>
+                    <li><a href="viajes/rutagastronomica.html">Ruta Gastronómica</a></li> <br> <br>
                 </ul>
-
-
-
-
-                <!--  <a href="index.html" target="_top " style="text-decoration:none"> -->
-
+                <!--  <a href="index.html"  style="text-decoration:none"> -->
+            </div>
+            <button class="acc-btn">
+      Sobre Xiiber
+    </button>
+            <div class="acc-content">
+                <ul class="list-unstyled f_list">
+                    <li><a href="xiiber.html">Xiiber Travel</a></li>
+                    <li><a href="cgtravel.html">CGTravel</a></li>
+                    <li><a href="http://faq.xiiber.com/">FAQ</a></li>
+                    <li><a href="politicas.html">Politicas de privacidad</a></li>
+                    <li>
+                        <a href="mapadesitio.html">Mapa de sitio</a>
+                    </li>
+                    <li>
+                        <a href="notificaciones.html">Notificaciones</a>
+                    </li>
+                    <li><a href="opcionesdepago.html" style="text-decoration:none">Opciones de pago</a></li>
+                    <li>
+                        <a href="desarrollado-por-hihello-monster.html" style="text-decoration:none">Desarrollado por hiHello.Monster</a>
+                    </li><br> <br>
+                </ul>
             </div>
 
             <button class="acc-btn">
-      What happens to chemists when they die?
+      Experiencias
     </button>
             <div class="acc-content">
-                <p>
-                    We barium [bury them].
-                </p>
-            </div>
-
-            <button class="acc-btn">
-      Why does the leopard find it difficult to hide and stalk?
-    </button>
-            <div class="acc-content">
-                <p>
-                    Because he is spotted always.
-                </p>
+                <ul class="list-unstyled f_list">
+                    <li><a href="#">Pokemon Go</a></li>
+                    <li><a href="#">Underground CDMX</a></li>
+                    <li><a href="#">Barber and Spa</a></li>
+                </ul><br><br>
             </div>
 
             <button class="acc-btn">
