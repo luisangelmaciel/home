@@ -8,7 +8,7 @@
 <html>
 
 <head>
-    <title>Xiiber Travel. Agencia de viajes gay </title>
+    <title>Opciones de pago </title>
 
     <!-- HiHello.monster -->
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
     <meta property="og:type " content="website ">
     <meta property="og:title " content="">
     <meta property='og:description' content=''>
-    <meta property="og:url " content="https://www..xiiber.com/ ">
+    <meta property="og:url " content="https://www.xiiber.com/ ">
     <meta property="og:site_name " content="Xiiber Travel, viajes gay y experiencias gay en CDMX">
     <meta property="og:image " content="https://tepozspa.xiiber.com/fotos/tepozspa_viajes_gay.jpg " />
     <meta property="og:image:secure_url " content="https://tepozspa.xiiber.com/fotos/tepozspa_viajes_gay.jpg " />
@@ -101,7 +101,125 @@
 
     <!-- Boton principal -->
     <div class="w3-container w3-center w3-animate-right ">
-        <h2>Opciones de pago</h2>
+
+        <div itemscope itemtype="https://schema.org/TouristAttraction">
+            <h2 class="section-title text-center">Formas de pago</h2>
+            <p class="lead main text-center"></p>
+
+            <button class="collapsible"><div><meta itemprop="paymentAccepted" content="Cash, Credit Card"/>Banco Azteca</div></button>
+            <div class="content">
+                <p><br>
+                    <table class="w3-table">
+                        <tr>
+                            <td>
+                                <p> Banco receptor </p>
+                            </td>
+                            <td>
+                                <p> <b>Banco Azteca </b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Nombre receptor <i class="fa fa-clone" onclick="myFunctionz()"></i></p>
+                            </td>
+                            <td> <input type="text" value="Luis Angel Maciel Padilla" id="myInput2"></td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> CLABE Interbancaria <i class="fa fa-clone" onclick="myFunction()"></i> </p>
+                            </td>
+                            <td> <input type="text" value="1271 8001 3324 6288 22 " id="myInput1"></td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Tarjeta de débito <i class="fa fa-clone" onclick="tarjetadebito()"></i> </p>
+                            </td>
+                            <td> <input type="text" value="4027 6657 4930 1926 " id="debito"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Número de cuenta <i class="fa fa-clone" onclick="numcuenta()"></i></p>
+                            </td>
+                            <td> <input type="text" value="2545 1332 4628 82 " id="cuenta"></td>
+                        </tr>
+                    </table>
+                    <script>
+                        function numcuenta() {
+                            var copyText = document.getElementById("cuenta");
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999)
+                            document.execCommand("copy");
+                            alert("Número de cuenta copiada " + copyText.value);
+                        }
+                    </script>
+                    <script>
+                        function tarjetadebito() {
+                            var copyText = document.getElementById("debito");
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999)
+                            document.execCommand("copy");
+                            alert("Tarjeta de débito copiada " + copyText.value);
+                        }
+                    </script>
+                    <script>
+                        function myFunction() {
+                            var copyText = document.getElementById("myInput1");
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999)
+                            document.execCommand("copy");
+                            alert("Copiada la CLABE " + copyText.value);
+                        }
+                    </script>
+                    <script>
+                        function myFunctionz() {
+                            var copyText = document.getElementById("myInput2");
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999)
+                            document.execCommand("copy");
+                            alert("Copiado el nombre receptor " + copyText.value);
+                        }
+                    </script>
+
+
+                    <i class="fa fa-exclamation-circle" style="font-size:6x;color:red"> En referencia anota tu numero de celular y nombre </i><br><br>
+            </div>
+            <button class="collapsible"><div><meta itemprop="paymentAccepted" content="Cash, Credit Card"/>Banca por internet</div></button>
+            <div class="content">
+                <br>
+                <p><b>CLABE Interbancaria:</b> 1271 8001 3324 6288 22<br>
+                    <p><b>Banco receptor</b> Banco Azteca<br>
+                        <p>Nombre receptor<b></b> Luis Maciel<br>
+            </div>
+            <button class="collapsible"><div><meta itemprop="paymentAccepted" content="Cash, Credit Card"/>Visa, Mastercard, American </div></button>
+            <div class="content">
+                <p><br>
+                    <b style="color:#000066;">Datos Generales</b><br>
+                    <p>Solicita tu número de referencia personalizado por whatsapp, solo indicanos cual será la tarjeta que utilizaras para poder generar el enlace y completes el pago, solo tienes 72 horas o de lo contrario tendrás que generar otro.
+                        <br>
+
+            </div>
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
+
+        </div>
+
     </div>
 
     <br>
