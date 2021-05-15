@@ -55,12 +55,12 @@
         }
         
         .hero .img {
-            filter: drop-shadow(0rem 1.5rem rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0rem 1.5rem rgba(226, 218, 218, 0.1));
             transition: 0.3s ease-out;
         }
         
         .card:hover .img {
-            filter: drop-shadow(0rem 2.5rem rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0rem 2.5rem rgba(226, 218, 218, 0.1));
         }
         
         .title {
@@ -119,8 +119,13 @@
         }
         
         .credit a {
-            text-decoration: wavy underline;
-            color: dodgerblue;
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .a {
+            text-decoration: none;
+            color: #000;
         }
     </style>
 
@@ -130,18 +135,37 @@
 
     <main class="card">
         <div class="hero">
-            <img src="https://www.xiiber.com/fotos/logo_xiiber_travel_v1.png" alt="section image" class="img">
+            <img src="https://www.xiiber.com/fotos/logo_xiiber_travel_v1.png" alt="section image" class="img" style="width:20%">
         </div>
 
 
         <div class="acc-container">
 
-            <button class="acc-btn">What is the definition of a will?</button>
+            <button class="acc-btn">Viajes</button>
             <div class="acc-content">
-                <p>
-                    It is a dead giveaway.
-                    <!--  <a href="index.html" target="_top " style="text-decoration:none"> -->
-                </p>
+
+                <ul class="list-unstyled f_list" style="text-decoration:none">
+                    <a href="viajes/acapulco.html" style="text-decoration:none">
+                        <li>▸ Acapulco </li>
+                    </a>
+                    <a href="viajes/puertovallarta.html" style="text-decoration:none">
+                        <li>▸ Puerto Vallarta </li>
+                    </a>
+                    <a href="viajes/zipolite.html" style="text-decoration:none">
+                        <li>▸ Zipolite </li>
+                    </a>
+                    <a href="viajes/veracruz.html#" style="text-decoration:none">
+                        <li>▸ Veracruz </li>
+                    </a>
+                    <li><a href="viajes/tepoztlan.html" style="text-decoration:none">Tepoztlan</a></li>
+                    <li><a href="viajes/rutagastronomica.html" style="text-decoration:none">Ruta Gastronómica</a> <br> <br>
+                </ul>
+
+
+
+
+                <!--  <a href="index.html" target="_top " style="text-decoration:none"> -->
+
             </div>
 
             <button class="acc-btn">
