@@ -138,8 +138,6 @@
     
 
     <link rel="stylesheet " href="css/style_xiiber.css ">
-    <link rel="stylesheet " href="css/logo_xiiber.css ">
-    <link rel="stylesheet " href="css/ModalFullSecciones.css ">
     <link rel="stylesheet " href="css/boton_principal.css ">
     <link rel="stylesheet " href="css/boton_banner.css ">
     <link rel="stylesheet " href="css/progress.css ">
@@ -173,7 +171,11 @@
             $("#footerx ").load("lib/templetes/hi/footerx.html ");
         });
     </script>
-
+ <script>
+    $(document).ready(function() {
+        $("#boton-modal ").load("boton-modal.html ");
+    });
+</script>
 
     <style>
         body {
@@ -282,6 +284,9 @@
     </div>
     <!-- 1 conect 2  -->
     <div class="w3-col m6 w3-animate-right ">
+        <div id="boton-modal">
+            <!-- Modal  -->
+        </div>
         <!-- Carrusel 1 -->
         <div class="w3-display-container w3-wide" id="news">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
