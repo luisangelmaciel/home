@@ -566,10 +566,6 @@
     content: "\f434"
 }
 
-.fa-bath:before {
-    content: "\f2cd"
-}
-
 .fa-battery-empty:before {
     content: "\f244"
 }
@@ -1196,14 +1192,6 @@
 
 .fa-cloud-showers-heavy:before {
     content: "\f740"
-}
-
-.fa-cloud-sun:before {
-    content: "\f6c4"
-}
-
-.fa-cloud-sun-rain:before {
-    content: "\f743"
 }
 
 .fa-cloud-upload-alt:before {
@@ -3126,10 +3114,6 @@
     content: "\f183"
 }
 
-.fa-mandalorian:before {
-    content: "\f50f"
-}
-
 .fa-map:before {
     content: "\f279"
 }
@@ -4630,18 +4614,6 @@
     content: "\f239"
 }
 
-.fa-suitcase:before {
-    content: "\f0f2"
-}
-
-.fa-suitcase-rolling:before {
-    content: "\f5c1"
-}
-
-.fa-sun:before {
-    content: "\f185"
-}
-
 .fa-superpowers:before {
     content: "\f2dd"
 }
@@ -5184,14 +5156,6 @@
 
 .fa-ussunnah:before {
     content: "\f407"
-}
-
-.fa-utensil-spoon:before {
-    content: "\f2e5"
-}
-
-.fa-utensils:before {
-    content: "\f2e7"
 }
 
 .fa-vaadin:before {
