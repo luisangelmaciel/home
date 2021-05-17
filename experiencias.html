@@ -70,7 +70,6 @@
     <meta name="p:domain_verify" content="1ccb70a44d7509dd6e6cad4538b2b9e2" />
 
     <link rel="stylesheet" href="./style_xiiber.css">
-    <link rel="stylesheet" href="./footerx.css">
     <link rel="stylesheet" href="./logo_xiiber.css">
     <link rel="stylesheet" href="./ModalFullSecciones.css">
     <link rel="stylesheet" href="./boton_principal.css">
@@ -90,6 +89,15 @@
     <link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.min.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+
+    <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jqjs.js" type="application/json"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#footerx").load("lib/templetes/hi/footerx.html");
+        });
+    </script>
 
 
 </head>
@@ -176,17 +184,7 @@
     <br><br><br>
 
     <!-- Footerx -->
-    <div class="footerx ">
-        <div class="icon-bar ">
-            <!--     <a href="#"><i class="bi bi-three-dots"  data-toggle="modal" data-target="#modal-fullscreen"></i></a>
-                    <a data-toggle="modal" data-target="#modal-fullscreen"><i class=" fas fa-ticket-alt "></i><p class="w3-small ">Experiencias</p></a> -->
-            <a onclick="document.location='index.html'"><i class="fas fa-home"></i><p class="w3-small ">Inicio</p></a>
-            <a onclick="document.location='notificaciones.html'"><i class="bi bi-bell-fill"></i><p class="w3-small ">Notificaciones</p></a>
-            <a onclick="document.location='viajes.html'"><i class=" fas fa-suitcase-rolling "></i><p class="w3-small ">Viajes</p></a>
-            <a onclick="document.location='experiencias.html'"><i class=" fas fa-ticket-alt"></i><p class="w3-small ">Experiencias</p></a>
-            <a onclick="document.location='mesxmes.html'"><i class="bi bi-calendar3" ></i><p class="w3-small ">Calendario</p></a>
-        </div>
-    </div>
+    <div id="footerx"> </div>
 
     <!-- Button floating Modal-Fullscreen -->
     <button data-toggle="modal" data-target="#modal-fullscreen"> <a class="w3-button  w3-circle  " style="position:fixed;top:60px;right:40px; "><i class="fas fa-ellipsis-v"></i></a> </button>

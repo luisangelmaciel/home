@@ -104,6 +104,14 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://www.xiiber.com/Semantic-UI-CSS-master/semantic.min.js"></script>
 
+    <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jqjs.js" type="application/json"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#footerx").load("lib/templetes/hi/footerx.html");
+        });
+    </script>
 
 </head>
 
@@ -124,9 +132,87 @@
         </div>
 
         <div class="w3-col m6 w3-animate-right ">
-        </div>
 
-        <!-- Alerta roja
+
+            <hr>
+
+            <!-- Botones Viajes -->
+            <div class="w3-container w3-center w3-animate-right w3-padding-64  ">
+                <h2 id=destinos></h2>
+                <h2>Viajes</h2>
+                <p>
+                    <a href="acapulco.html"> <i class="fa fa-exclamation-circle "></i></a>
+                    <a href="#acapulco"><button class="button w3-border w3-round-large " style="vertical-align:middle "><span><b>Acapulco</b> </span></button><br></a>
+
+                    <a href="tepozspa.html" class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                    <a href="viajes-tepozspa.html"><button class="button w3-border w3-round-large " style="vertical-align:middle " ><span><b>Tepozspa</b> </span></button><br></a>
+
+                    <a href="# " class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                    <a href="#casajuana"><button class="button w3-border w3-round-large" style="vertical-align:middle" onclick="alert( 'Nuevo destino') "><span><b>Casa Doña Juana</b> </span></button><br></a>
+
+                    <a href="# " class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                    <a href="#cdmx"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById('acapulco').style.display='block'"><span><b>CDMX</b> </span></button></a><br>
+
+                    <a href="# " class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                    <a href="#puertovallarta"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Lo que pasa en Puerto Vallarta, se queda en Puerto Vallarta') "><span><b>Pto. Vallarta</b> </span></button></a><br>
+
+                    <a href="# " class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                    <a href="#zipolite"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>Zipolite</b> </span></button></a><br>
+
+                    <a href="# " class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                    <a href="#gastronomica"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>Ruta Gastronómica</b> </span></button></a><br>
+
+
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <!-- <button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="document.location='index.html' "><span><b>Acapulco</b></a> </span>
+        </button><br> -->
+            </div>
+
+            <div class="w3-container w3-center w3-animate-right ">
+                <h2 id="acapulco"></h2><br>
+                <h2>Acapulco</h2>
+                <div>
+                    <a href="acapulco-xiib.html"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>15 al 17 octubre</b> </span></button></a><br>
+                    <button class="button w3-border w3-round-large " style="vertical-align:middle "><span> <a href="#destinos"><b><i class=" fas fa-suitcase-rolling "></i> - Atrás</b></a> </span></button><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+
+
+            <div class="w3-container w3-center w3-animate-right ">
+                <h2 id="cdmx"></h2><br>
+                <h2>CDMX</h2>
+                <div>
+                    <a href="#"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>Tour gastronómico</b> </span></button></a><br>
+                    <a href="#"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>Ruta Pokemon Go</b> </span></button></a><br>
+                    <a href="#"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>Tour spa</b> </span></button></a><br>
+                    <button class="button w3-border w3-round-large " style="vertical-align:middle "><span> <a href="#destinos"><b><i class=" fas fa-suitcase-rolling "></i> - Atrás</b></a> </span></button><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+            <div class="w3-container w3-center w3-animate-right ">
+                <h2 id="puertovallarta"></h2><br>
+                <h2>Puerto Vallarta</h2>
+                <div>
+                    <a href="#"><button class="button w3-border w3-round-large " style="vertical-align:middle " onclick="alert( 'Pronto volveremos a viajar') "><span><b>Tour gastronimico</b> </span></button></a><br>
+                    <button class="button w3-border w3-round-large " style="vertical-align:middle "><span> <a href="#destinos"><b><i class=" fas fa-suitcase-rolling "></i> - Atrás</b></a> </span></button><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+
+            <!-- Lins footers --><br>
+            <div class="w3-center ">
+                <a class="item " href=" xiiber.html ">Acerca de Xiiber  | </a>
+                <a class="item " href="anunciate.html ">  Anúnciate con nosotros   </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Alerta roja
     <div class="w3-container w3-animate-right  ">
         <br>
         <div class="alert alert-danger alert-dismissible">
@@ -136,30 +222,20 @@
     </div>-->
 
 
-        <br><br><br><br>
+    <br><br><br><br>
 
-        <!-- Footerx -->
-        <div class="footerx ">
-            <div class="icon-bar ">
-                <!--     <a href="#"><i class="bi bi-three-dots"  data-toggle="modal" data-target="#modal-fullscreen"></i></a>
-                     <a data-toggle="modal" data-target="#modal-fullscreen"><i class=" fas fa-ticket-alt "></i><p class="w3-small ">Experiencias</p></a> -->
-                <a onclick="document.location='index.html'"><i class="fas fa-home"></i><p class="w3-small ">Inicio</p></a>
-                <a onclick="document.location='notificaciones.html'"><i class="bi bi-bell-fill"></i><p class="w3-small ">Notificaciones</p></a>
-                <a onclick="document.location='viajes.html'"><i class=" fas fa-suitcase-rolling "></i><p class="w3-small ">Viajes</p></a>
-                <a onclick="document.location='experiencias.html'"><i class=" fas fa-ticket-alt"></i><p class="w3-small ">Experiencias</p></a>
-                <a onclick="document.location='mesxmes.html'"><i class="bi bi-calendar3" ></i><p class="w3-small ">Calendario</p></a>
-            </div>
-        </div>
+    <!-- Footerx -->
+    <div id="footerx"> </div>
 
-        <!-- Button floating Modal-Fullscreen -->
-        <button data-toggle="modal" data-target="#modal-fullscreen"> <a class="w3-button  w3-circle  " style="position:fixed;top:60px;right:40px; "><i class="fas fa-ellipsis-v"></i></a> </button>
-        <!-- Modal-Fullscreen -->
-        <div class="modal fade modal-fullscreen" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <iframe src="secciones.html " " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
+    <!-- Button floating Modal-Fullscreen -->
+    <button data-toggle="modal" data-target="#modal-fullscreen"> <a class="w3-button  w3-circle  " style="position:fixed;top:60px;right:40px; "><i class="fas fa-ellipsis-v"></i></a> </button>
+    <!-- Modal-Fullscreen -->
+    <div class="modal fade modal-fullscreen" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <iframe src="secciones.html " " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
                 </div>
             </div>
         </div>
