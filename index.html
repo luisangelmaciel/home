@@ -39,7 +39,8 @@
     <title>Xiiber Travel, viajes gay y experiencias gay México </title>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> `
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> `
+    <meta name="theme-color" content="#317EFB" />
     <meta http-equiv="Content-Language" content="es-mx">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible " content="IE=edge ">
@@ -110,7 +111,7 @@
     <meta name="twitter:player:stream:content_type " content="video/mp4 " />
 
     <link rel="canonical " href="https://www.xiiber.com " />
-    <link rel="icon " href="favicon.png " sizes="192x192 ">
+    <link rel="icon " href="maskable_icon.png " sizes="114x114 ">
    
     <!-- Fonts -->
     <link rel="preload " as="font-display: auto; ">
@@ -123,7 +124,6 @@
     
 
     <link rel="stylesheet " href="./css/style_xiiber.css ">
-    <link rel="stylesheet " href="./css/footerx.css ">
     <link rel="stylesheet " href="./css/logo_xiiber.css ">
     <link rel="stylesheet " href="./css/ModalFullSecciones.css ">
     <link rel="stylesheet " href="./css/boton_principal.css ">
@@ -135,7 +135,7 @@
     <!-- Complementos -->
     <link rel="stylesheet " href="https://www.w3schools.com/w3css/4/w3.css ">
     <link rel="stylesheet " href="https://www.w3schools.com/w3css/4/w3pro.css ">
-    <link rel="stylesheet " href="https://www.w3schools.com/lib/w3-safety-blue.css ">
+    <link rel="stylesheet " href="https://www.w3schools.com/lib/w3-colors-safety.css ">
     <link rel="stylesheet " href="https://use.fontawesome.com/releases/v5.6.3/css/all.css " integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ " crossorigin="anonymous ">
     <link rel="stylesheet " href="Semantic-UI-CSS-master/semantic.min.css " type="text/css ">
 
@@ -151,8 +151,16 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
     <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin=" anonymous "></script>
-    <script src="Semantic-UI-CSS-master/semantic.min.js "></script>
+    
+    
+    <script src="jquery.min.js " type="text/javascript " charset="utf-8 "></script>
+    <script src="jqjs.js " type="application/json "></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#footerx ").load("lib/templetes/footerx.html ");
+        });
+    </script>
 
     <style>
         body {
@@ -479,7 +487,7 @@
                 <div class=" right floated ui star rating " data-max-rating="1 "></div><br>
 
 
-                <div class="header " wfd-id="189 ">Tepozspa</div>
+                <h3>Tepozspa</h3>
                 <div class="description " wfd-id="188 ">
                     <p>Viaje temático solo para solteros <span class="badge badge-danger "> Cupo limitado</span></p>
                     <div class="center ">
@@ -493,7 +501,8 @@
                     <br>
 
                     <p>Transporte redondo saliendo desde la CDMX a las 9am en punto de metro General anaya.<br> La salida del Tepospa es a las 8:30pm. Reserva con el 50% y el resto puede ser liquidado unos días antes o a la hora de abordar el bus
-                        <a href="viajes/tepozspa.html" class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+                        <a onclick="document.location='viajes/tepozspa.html'" class="text-decoration-none "> <i class="circular fa fa-exclamation-circle "></i></a>
+
                     </p>
 
                     <button class="buttonm w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById('ticketModallocker').style.display='block'"><span><b>Locker</b> </span>
@@ -630,30 +639,30 @@
             <table class="w3-table-all w3-large w3-container ">
                 <tr>
                     <td class="w3-safety-red w3-center ">
-                        <b> México </b> <a href=""><i class="fas fa-angle-right "></i> </a></td>
+                        <b> México </b> <i class="fas fa-angle-right "></i> </td>
                 </tr>
                 <tr>
                     <td class="w3-safety-orange w3-center ">
-                        <b> CDMX </b> <a href="https://cdmx.xiiber.com/ "><i class="fas fa-angle-right "></i> </a></td>
+                        <b> CDMX </b> <a href="https://cdmx.xiiber.com "><i class="fas fa-angle-right "></i> </a></td>
                 </tr>
                 <tr>
                     <td class="w3-safety-yellow w3-center ">
-                        <b>Puerto Vallarta </b> <a href="https://puertovallarta.xiiber.com/ "><i class="fas fa-angle-right "></i> </a>
+                        <b>Puerto Vallarta </b> <a href="https://puertovallarta.xiiber.com "><i class="fas fa-angle-right "></i> </a>
                     </td>
                 </tr>
                 <tr>
                     <td class="w3-safety-green w3-center ">
-                        <b>Acapulco </b> <a href="https://acapulco.xiiber.com/"><i class="fas fa-angle-right "></i> </a>
+                        <b>Acapulco </b> <a href="https://acapulco.xiiber.com"><i class="fas fa-angle-right "></i> </a>
                     </td>
                 </tr>
                 <tr>
                     <td class="w3-safety-blue w3-center ">
-                        <b>Zipolite </b> <a href="https://zipolite.xiiber.com/"><i class="fas fa-angle-right "></i> </a>
+                        <b>Zipolite </b> <a href="https://zipolite.xiiber.com"><i class="fas fa-angle-right "></i> </a>
                     </td>
                 </tr>
                 <tr>
                     <td class="w3-safety-purple w3-center ">
-                        <b>Tepozspa </b> <a href="https://tepozspa.xiiber.com/ "><i class="fas fa-angle-right "></i> </a>
+                        <b>Tepozspa </b> <a href="https://tepozspa.xiiber.com "><i class="fas fa-angle-right "></i> </a>
                     </td>
                 </tr>
             </table>
@@ -662,23 +671,14 @@
         <!-- Carrusel --><br>
         <div class="slidercarrusel">
             <div class="slide-trackcarrusel">
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2VWoAM-_CU?format=png&name=4096x4096" height="100" width="250" alt="Sugar daddy and sugar baby" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2mWkAcrCQO?format=jpg&name=4096x4096" height="100" width="250" alt="Recomendación CGT-color" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQmXYAIpA2e?format=png&name=4096x4096" height="100" width="250" alt="Viaje en tangas" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZPhWoAIoQq3?format=jpg&name=4096x4096" height="100" width="250" alt="Viajemos todxs por México - color" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQ6X0AM03FD?format=png&name=4096x4096" height="100" width="250" alt="Viaje para solteros" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2AXUAEpCBG?format=jpg&name=4096x4096" height="100" width="250" alt="Logo CGT-color" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv1jX0AIAx_I?format=png&name=4096x4096" height="100" width="250" alt="Veracruz" /></div>
-
-
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2VWoAM-_CU?format=png&name=4096x4096" height="100" width="250" alt="Sugar daddy and sugar baby" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2mWkAcrCQO?format=jpg&name=4096x4096" height="100" width="250" alt="Recomendación CGT-color" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQmXYAIpA2e?format=png&name=4096x4096" height="100" width="250" alt="Viaje en tangas" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZPhWoAIoQq3?format=jpg&name=4096x4096" height="100" width="250" alt="Viajemos todxs por México - color" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQ6X0AM03FD?format=png&name=4096x4096" height="100" width="250" alt="Viaje para solteros" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2AXUAEpCBG?format=jpg&name=4096x4096" height="100" width="250" alt="Logo CGT-color" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZP8WMAUkhsQ?format=png&name=4096x4096" height="100" width="250" alt="Viaje Para solteros app" /></div>
-                <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv1jX0AIAx_I?format=png&name=4096x4096" height="100" width="250" alt="Veracruz" /></div>
+                <div class="slidecarrusel"><img src="image/cgt.webp" height="100" width="250" alt="CGT" /></div>
+                <div class="slidecarrusel"><img src="image/visitmexicogay.webp" height="100" width="250" alt="Visit México Gay" /></div>
+                <div class="slidecarrusel"><img src="image/cgtrecomienda.webp" height="100" width="250" alt="CGT recomienda" /></div>
+                <div class="slidecarrusel"><img src="image/viaje_para_solteros.png" height="100" width="250" alt="Viaje para solteros" /></div>
+                <div class="slidecarrusel"><img src="image/cgt.webp" height="100" width="250" alt="CGT" /></div>
+                <div class="slidecarrusel"><img src="image/visitmexicogay.webp" height="100" width="250" alt="Visit México Gay" /></div>
+                <div class="slidecarrusel"><img src="image/cgtrecomienda.webp" height="100" width="250" alt="CGT recomienda" /></div>
+                <div class="slidecarrusel"><img src="image/viaje_para_solteros.png" height="100" width="250" alt="Viaje para solteros" /></div>
 
             </div>
         </div>
@@ -729,17 +729,7 @@
     <br><br><br><br>
 
     <!-- Footerx -->
-    <div class="footerx ">
-        <div class="icon-bar ">
-            <!--     <a href="#"><i class="bi bi-three-dots"  data-toggle="modal" data-target="#modal-fullscreen"></i></a>
-                     <a data-toggle="modal" data-target="#modal-fullscreen"><i class=" fas fa-ticket-alt "></i><p class="w3-small ">Experiencias</p></a> -->
-            <a onclick="document.location='index.html'"><i class="fas fa-home"></i><p class="w3-small ">Inicio</p></a>
-            <a onclick="document.location='notificaciones.html'"><i class="bi bi-bell-fill"></i><p class="w3-small ">Notificaciones</p></a>
-            <a onclick="document.location='viajes.html'"><i class=" fas fa-suitcase-rolling "></i><p class="w3-small ">Viajes</p></a>
-            <a onclick="document.location='experiencias.html'"><i class=" fas fa-ticket-alt"></i><p class="w3-small ">Experiencias</p></a>
-            <a onclick="document.location='2021/2021.html'"><i class="bi bi-calendar3" ></i><p class="w3-small ">Calendario</p></a>
-        </div>
-    </div>
+    <div id="footerx"> </div>
 
     <!-- Button floating Modal-Fullscreen -->
     <button data-toggle="modal" data-target="#modal-fullscreen"> <a class="w3-hover-opacity " style="position:fixed;top:60px;right:40px; "><img src="sgv/elipsis.png " alt="Xiiber Travel " width="47" height="68" ></a> </button>
@@ -761,10 +751,7 @@
             $('[data-toggle="tooltip "]').tooltip();
         });
 
-        $(document).ready(function() {
-            $('.toast').toast('show');
-        });
-
+    
         $(document).ready(function() {
             $('[data-toggle="popover "]').popover();
         });
