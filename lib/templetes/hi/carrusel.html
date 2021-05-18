@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Carrusel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Make the image fully responsive */
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#carrusel").load("https://www.xiiber.com/lib/templetes/hi/carrusel.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <!--   <div id="carrusel"> </div> -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.xiiber.com/image/banner_tepozspa.webp" alt="Tepozspa, viajes gay" width="680" height="3020">
+                <a href="https://tepozspa.xiiber.com/">
+                    <div class="carousel-caption">
+                        <h3>Tepozspa</h3>
+                        <p>Salimos el 3er sabado de cada mes</p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.xiiber.com/image/banner_acapulco.webp" alt="Acapulco. turismo rosa" width="680" height="3020">
+                <a href="viajes/acapulco.html">
+                    <div class="carousel-caption">
+                        <h4>Lo que pasa en Acapulco,</h4>
+                        <p>se queda en Acapulco.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.xiiber.com/image/banner_cdmx.webp" alt="CDMX. Encuentros gay" width="680" height="3020">
+            <a href="experiencias/Underground.html">
+                <div class="carousel-caption">
+                    <h3>CDMX</h3>
+                    <p>UNDERGROUND</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+    </div>
+
+</body>
+
+</html>

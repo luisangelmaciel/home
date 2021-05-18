@@ -126,7 +126,7 @@
     <link rel="preload " href="lib/fonts/fa-regular-400.woff2 " as="font " type="font/woff2 " crossorigin>
     <link rel="preload " href="lib/fonts/fontawesome-webfont.woff2 " as="font " type="font/woff2 " crossorigin>
     <link rel="preload " href="lib/fonts/fa-solid-900.woff2 " as="font " type="font/woff2 " crossorigin>
-    <link rel="preload " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 " as="font " type="font/woff2 " crossorigin>
+
     
 
     <link rel="preconnect " href="https://fonts.gstatic.com ">
@@ -148,8 +148,6 @@
 
     <!-- Complementos -->
     <link rel="stylesheet " href="https://www.w3schools.com/w3css/4/w3.css ">
-    <link rel="stylesheet " href="https://www.w3schools.com/w3css/4/w3pro.css ">
-    <!-- <link rel="stylesheet " href="Semantic-UI-CSS-master/semantic.min.css " type="text/css "> -->
 
     <!-- Icons -->
     <link rel="stylesheet " href="https://fonts.googleapis.com/icon?family=Material+Icons ">
@@ -160,7 +158,7 @@
 
     <!-- Modal -->
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css ">
-    <link rel='stylesheet' href='css/bootstrap337.min.css'>
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css " integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 " crossorigin="anonymous ">
 
 
     <style>
@@ -412,6 +410,12 @@
             font-size: 20pt;
         }
     </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+  <script>
+      $(document).ready(function() {
+          $("#carrusel ").load("https://www.xiiber.com/lib/templetes/hi/carrusel.html ");
+      });
+  </script>
 
 
 </head>
@@ -423,8 +427,7 @@
     </a>-->
     
 
-    <!-- Spinner -->
-    <div class="spinner-grow spinner-grow-sm "></div>
+   
  
     <!-- Main -->
     <div class=" w3-container w3-row-padding ">
@@ -442,60 +445,8 @@
             <!-- Modal  -->
         </div>
         <!-- Carrusel 1 -->
-        <div class="w3-display-container w3-wide" id="news">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
+        <div id="carrusel"> </div>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-
-                    <div class="item active">
-                        <img src="image/banner_tepozspa.webp" alt="Tepozspa, viajes gay" style="width:100%;">
-                        <a href="https://tepozspa.xiiber.com/">
-                            <div class="carousel-caption">
-                                <h3>Tepozspa</h3>
-                                <p>Salimos el 3er sabado de cada mes</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <img src="image/banner_acapulco.webp" alt="Acapulco. turismo rosa" style="width:100%;">
-                        <a href="viajes/acapulco.html">
-                            <div class="carousel-caption">
-                                <h4>Lo que pasa en Acapulco,</h4>
-                                <p>se queda en Acapulco.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <img src="image/banner_cdmx.webp" alt="CDMX. Encuentros gay" style="width:100%;">
-                        <a href="experiencias/Underground.html">
-                            <div class="carousel-caption">
-                                <h3>CDMX</h3>
-                                <p>UNDERGROUND</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span style="color: white;font-size: 10vw;"> &#x000AB; </span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span style="color: white;font-size: 10vw;"> &#x000BB; </span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
-            </div>
-        </div>
 
         <!-- cardflip2020 -->
         <div class="box-containercardflip2020 ">
@@ -589,68 +540,68 @@
         </bodyex>
 
         <!-- Banners 1 y 2 -->
-        <div class="media p-3 ">
-            <div class="ui two column grid " wfd-id="89 ">
-                <div class="column " wfd-id="93 ">
-                    <div class="ui fluid image " wfd-id="94 ">
-                        <div class="ui red ribbon label " wfd-id="95 ">
-                            &#10687; &nbsp; Pool party
-                        </div>
-                        <a href="viajes.html#tepozspa "> <img src="image/tepozspa.webp" width="508" height="420" alt=" Tepozspa"></a>
+        <div class="ui two column grid " wfd-id="89 ">
+            <div class="column " wfd-id="93 ">
+                <div class="ui fluid image " wfd-id="94 ">
+                    <div class="ui red ribbon label " wfd-id="95 ">
+                        &#10687; &nbsp; Pool party
                     </div>
+                    <a href="viajes.html#tepozspa "> <img src="image/tepozspa.webp" width="508" height="420" alt=" Tepozspa"></a>
                 </div>
-                <div class="column " wfd-id="90 ">
-                    <div class="ui fluid image " wfd-id="91 ">
-                        <div class="ui black ribbon label " wfd-id="92 ">
-                            <h5> <i class="fas fa-map "></i> &nbsp; CDMX </h5>
-                        </div>
-                        <a href="experiencias/Underground.html "><img src="image/cdmx.webp" width="508" height="420" alt=" CDMX"></a>
+            </div>
+            <div class="column " wfd-id="90 ">
+                <div class="ui fluid image " wfd-id="91 ">
+                    <div class="ui black ribbon label " wfd-id="92 ">
+                        &#10687; &nbsp; CDMX
                     </div>
+                    <a href="experiencias/Underground.html "><img src="image/cdmx.webp" width="508" height="420" alt=" CDMX"></a>
                 </div>
             </div>
         </div>
+
         <!-- Banners 3 y 4 --><br>
-        <div class="media p-3 ">
-            <div class="ui two column grid " wfd-id="89 ">
-                <div class="column " wfd-id="93 ">
-                    <div class="ui fluid image " wfd-id="94 ">
-                        <div class="ui orange ribbon label " wfd-id="95 ">
-                            <h5> <i class="fas fa-utensils "></i> &nbsp; Gastrónomica </h5>
-                        </div>
-                        <a href="experiencias/rutagastronimica.html"> <img src="image/pizza.webp" width="508" height="420" alt=" Piza "></a>
+
+        <div class="ui two column grid " wfd-id="89 ">
+            <div class="column " wfd-id="93 ">
+                <div class="ui fluid image " wfd-id="94 ">
+                    <div class="ui orange ribbon label " wfd-id="95 ">
+                        &#10687; &nbsp; Gastrónomica
                     </div>
+                    <a href="experiencias/rutagastronimica.html"> <img src="image/pizza.webp" width="508" height="420" alt=" Piza "></a>
                 </div>
-                <div class="column " wfd-id="90 ">
-                    <div class="ui fluid image " wfd-id="91 ">
-                        <div class="ui blue ribbon label " wfd-id="92 ">
-                            <h5> <i class="fas fa-bath "></i> Spa & Barbers &nbsp; </h5>
-                        </div>
-                        <a href="experiencias.html#spabarber "> <img src="image/spa.webp" width="508" height="420" alt="Spa "></a>
+            </div>
+            <div class="column " wfd-id="90 ">
+                <div class="ui fluid image " wfd-id="91 ">
+                    <div class="ui blue ribbon label " wfd-id="92 ">
+                        &#10687; &nbsp;Spa & Barbers &nbsp;
                     </div>
+                    <a href="experiencias.html#spabarber "> <img src="image/spa.webp" width="508" height="420" alt="Spa "></a>
                 </div>
             </div>
         </div>
+
         <!-- Banners 5 y 6 --><br>
-        <div class="media p-3 ">
-            <div class="ui two column grid " wfd-id="89 ">
-                <div class="column " wfd-id="93 ">
-                    <div class="ui fluid image " wfd-id="94 ">
-                        <div class="ui orange ribbon label " wfd-id="95 ">
-                            Ruta Pokemon Go
-                        </div>
-                        <a href="experiencias/pokemongo.html"> <img src="image/pokemongo.webp" width="508" height="420" alt=" Ruta Pokemon Go"></a>
+
+        <div class="ui two column grid " wfd-id="89 ">
+            <div class="column " wfd-id="93 ">
+                <div class="ui fluid image " wfd-id="94 ">
+                    <div class="ui orange ribbon label " wfd-id="95 ">
+                        Ruta Pokemon Go
                     </div>
+                    <a href="experiencias/pokemongo.html"> <img src="image/pokemongo.webp" width="508" height="420" alt=" Ruta Pokemon Go"></a>
                 </div>
-                <div class="column " wfd-id="90 ">
-                    <div class="ui fluid image " wfd-id="91 ">
-                        <div class="ui green ribbon label " wfd-id="92 ">
-                            Acapulco
-                        </div>
-                        <a href="viajes/acapulco.html "> <img src="image/acapulco.webp" width="508" height="420" alt=" Acapulco"></a>
+            </div>
+            <div class="column " wfd-id="90 ">
+                <div class="ui fluid image " wfd-id="91 ">
+                    <div class="ui green ribbon label " wfd-id="92 ">
+                        Acapulco
                     </div>
+                    <a href="viajes/acapulco.html "> <img src="image/acapulco.webp" width="508" height="420" alt=" Acapulco"></a>
                 </div>
             </div>
         </div>
+
+
 
         <!-- Tepozspa en tangas--><br>
         <div class="ui card " wfd-id="183 ">
@@ -908,19 +859,19 @@
     <div class="footerx ">
         <div class="icon-bar  ">
             <a onclick="document.location='https://www.xiiber.com'"><img src="sgv/home.png" alt="Home" height="33w" width="33w" class="w3-hover-opacity">
-                <p class="w3-small ">Inicio</p>
+                <p style="color: grey; font-size: small; text-align: center;">Inicio</p>
             </a>
             <a onclick="document.location='https://www.xiiber.com/notificaciones.html'"><img src="sgv/notificaciones.png" alt="Notificaciones" height="33w" width="33w" class="w3-hover-opacity">
-                <p class="w3-small ">Notificaciones</p>
+                <p style="color: grey; font-size: small; text-align: center;">Notificaciones</p>
             </a>
             <a onclick="document.location='https://www.xiiber.com/viajes.html'"><img src="sgv/maleta.png" alt="Viajes" height="33w" width="33w" class="w3-hover-opacity">
-                <p class="w3-small ">Viajes</p>
+                <p style="color: grey; font-size: small; text-align: center;">Viajes</p>
             </a>
             <a onclick="document.location='https://www.xiiber.com/experiencias'"><img src="sgv/ticket.png" alt="Experiencias" height="33w" width="33w" class="w3-hover-opacity">
-                <p class="w3-small ">Experiencias</p>
+                <p style="color: grey; font-size: small; text-align: center;">Experiencias</p>
             </a>
             <a onclick="document.location='https://www.xiiber.com/2021/2021.html'"><img src="sgv/calendario.png" alt="Calendario" height="33w" width="33w" class="w3-hover-opacity">
-                <p class="w3-small ">Calendario</p>
+                <p style="color: grey; font-size: small; text-align: center;">Calendario</p>
             </a>
         </div>
     </div>
@@ -938,10 +889,7 @@
             </div>
         </div>
     </div>
-          
-
-
-            
+                      
 
 
 
@@ -967,7 +915,7 @@
     </script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
 
 
 </html>
