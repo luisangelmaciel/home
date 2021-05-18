@@ -16,6 +16,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -234,17 +235,79 @@
     }
 </style>
 
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
-    $(document).ready(function() {
-        $("#xiibertwitter").load("");
-    });
+    var myObject = {
+        "customers ": [{
+            "CustomerName ": "Alfreds Futterkiste ",
+            "City ": "Berlin ",
+            "Country ": "Germany "
+        }, {
+            "CustomerName ": "Ana Trujillo Emparedados y helados ",
+            "City ": "México D.F. ",
+            "Country ": "Mexico "
+        }, {
+            "CustomerName ": "Antonio Moreno Taquería ",
+            "City ": "México D.F. ",
+            "Country ": "Mexico "
+        }, {
+            "CustomerName ": "Around the Horn ",
+            "City ": "London ",
+            "Country ": "UK "
+        }, {
+            "CustomerName ": "B 's Beverages",
+            "City": "London",
+            "Country": "UK"
+        }, {
+            "CustomerName": "Berglunds snabbköp",
+            "City": "Luleå",
+            "Country": "Sweden"
+        }, {
+            "CustomerName": "Blauer See Delikatessen",
+            "City": "Mannheim",
+            "Country": "Germany"
+        }, {
+            "CustomerName": "Blondel père et fils",
+            "City": "Strasbourg",
+            "Country": "France"
+        }, {
+            "CustomerName": "Bólido Comidas preparadas",
+            "City": "Madrid",
+            "Country": "Spain"
+        }, {
+            "CustomerName": "Bon app' ",
+            "City ": "Marseille ",
+            "Country ": "France "
+        }, {
+            "CustomerName ": "Bottom-Dollar Marketse ",
+            "City ": "Tsawassen ",
+            "Country ": "Canada "
+        }, {
+            "CustomerName ": "Cactus Comidas para llevar ",
+            "City ": "Buenos Aires ",
+            "Country ": "Argentina "
+        }, {
+            "CustomerName ": "Centro comercial Moctezuma ",
+            "City ": "México D.F. ",
+            "Country ": "Mexico "
+        }, {
+            "CustomerName ": "Chop-suey Chinese ",
+            "City ": "Bern ",
+            "Country ": "Switzerland "
+        }, {
+            "CustomerName ": "Comércio Mineiro ",
+            "City ": "São Paulo ",
+            "Country ": "Brazil "
+        }]
+    };
 </script>
+
+
+</head>
 
 
 <body>
 
-    <div id="xiibertwitter"> </div>
+
 
     <!-- Navbar -->
     <a onclick="document.getElementById( 'ticketModal').style.display='block' "><img src="sgv/elipsis.webp " class="w3-hover-opacity " alt="Xiiber Travel " width="47 " height="68 " title="Viajes Xiiber" style="position:fixed;top:60px;right:40px; "></a>
@@ -256,8 +319,209 @@
         </div>
     </div>
 
+    
+    <div w3-include-html="mapa.html "></div> 
 
- 
+    <p>Click the button to toggle elements with class="city ".</p>
+    
+    <p>
+    <button onclick="w3.toggleShow( '.city') ">Tcity</button>
+    </p>
+    
+    <div id="London " class="city ">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+    
+    <div id="Paris " class="city ">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Tokyo " class="city ">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    <div w3-include-html="content.html "></div> 
+    
+    <p>
+    <button onclick="w3.toggleShow( '.cit') ">cit</button>
+    </p>
+    
+    <div id="London " class="cit ">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+    
+    <div id="Paris " class="cit ">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Tokyo " class="cit ">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    
+    <h2>Testing W3.JS in HTML</h2>
+    
+    <table id="id011 ">
+      <tr>
+        <th>Customer</th>
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+      <tr w3-repeat="customers ">
+        <td>{{CustomerName}}</td>
+        <td>{{City}}</td>
+        <td>{{Country}}</td>
+      </tr>
+    </table>
+    
+    <script>
+    w3.getHttpObject("customers.js ", myFunction);
+    
+    function myFunction(myObject) {
+      w3.displayObject("id011 ", myObject);
+    }
+    </script>
+    
+    
+    <div id="id013 ">
+    {{firstName}} 
+    </div>
+    
+    <div id="id023 ">
+     {{lastName}}
+    </div>
+    
+    
+    <script>
+    myObject = {"firstName " : "John ", "lastName " : "Doe "};
+    w3.displayObject("id013 ", myObject);
+    w3.displayObject("id023 ", myObject);
+    </script>
+    
+    
+    <script>
+    w3.includeHTML();
+    </script>
+    
+   
+
+        
+<table id="id0111 ">
+    <tr>
+      <th>Customer</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+    <tr w3-repeat="customers ">
+      <td>{{CustomerName}}</td>
+      <td>{{City}}</td>
+      <td>{{Country}}</td>
+    </tr>
+  </table>
+  
+  <script>
+  w3.displayObject("id0111 ", myObject);
+  </script>
+  
+    <div id="id013 ">
+        {{firstName}} 
+        </div>
+        
+        <div id="id023 ">
+         {{lastName}}
+        </div>
+        
+        
+        <script>
+        myObject = {"firstName " : "John ", "lastName " : "Doe "};
+        w3.displayObject("id013 ", myObject);
+        w3.displayObject("id023 ", myObject);
+        </script>
+
+<p>Click the button to toggle elements with class="city ".</p>
+
+    <div w3-include-html="h1.html "></div> 
+
+    <p>Click the button to toggle elements with class="city ".</p>
+    
+    <p>
+    <button onclick="w3.toggleShow( '.city') ">Tcity</button>
+    </p>
+    
+    <div id="London " class="city ">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+    
+    <div id="Paris " class="city ">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Tokyo " class="city ">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    <div w3-include-html="https://www.w3schools.com/w3js/content.html "></div> 
+    
+    <p>
+    <button onclick="w3.toggleShow( '.cit') ">cit</button>
+    </p>
+    
+    <div id="London " class="cit ">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+    
+    <div id="Paris " class="cit ">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Tokyo " class="cit ">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    
+    <h2>Testing W3.JS in HTML</h2>
+    
+    <table id="id011 ">
+      <tr>
+        <th>Customer</th>
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+      <tr w3-repeat="customers ">
+        <td>{{CustomerName}}</td>
+        <td>{{City}}</td>
+        <td>{{Country}}</td>
+      </tr>
+    </table>
+    
+    <script>
+    w3.getHttpObject("https://www.w3schools.com/w3js/customers.js ", myFunction);
+    
+    function myFunction(myObject) {
+      w3.displayObject("id011 ", myObject);
+    }
+    </script>
+    
+    
+    
+    <script>
+    w3.includeHTML();
+    </script>
+    
+    
+
 
     <!-- Footerx -->
     <div class="footerx ">
@@ -280,7 +544,5 @@
         </div>
     </div>
 </body>
-
-</html>
 
 </html>

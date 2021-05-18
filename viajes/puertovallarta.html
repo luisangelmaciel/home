@@ -37,6 +37,80 @@
             background: white;
         }
     </style>
+
+    <script>
+        var myObject = {
+            "customers": [{
+                "CustomerName": "Alfreds Futterkiste",
+                "City": "Berlin",
+                "Country": "Germany"
+            }, {
+                "CustomerName": "Berglunds snabbköp",
+                "City": "Luleå",
+                "Country": "Sweden"
+            }, {
+                "CustomerName": "Centro comercial Moctezuma",
+                "City": "México D.F.",
+                "Country": "Mexico"
+            }, {
+                "CustomerName": "Ernst Handel",
+                "City": "Graz",
+                "Country": "Austria"
+            }, {
+                "CustomerName": "FISSA Fabrica Inter. Salchichas S.A.",
+                "City": "Madrid",
+                "Country": "Spain"
+            }, {
+                "CustomerName": "Galería del gastrónomo",
+                "City": "Barcelona",
+                "Country": "Spain"
+            }, {
+                "CustomerName": "Island Trading",
+                "City": "Cowes",
+                "Country": "UK"
+            }, {
+                "CustomerName": "Königlich Essen",
+                "City": "Brandenburg",
+                "Country": "Germany"
+            }, {
+                "CustomerName": "Laughing Bacchus Wine Cellars",
+                "City": "Vancouver",
+                "Country": "Canada"
+            }, {
+                "CustomerName": "Magazzini Alimentari Riuniti",
+                "City": "Bergamo",
+                "Country": "Italy"
+            }, {
+                "CustomerName": "North/South",
+                "City": "London",
+                "Country": "UK"
+            }, {
+                "CustomerName": "Paris spécialités",
+                "City": "Paris",
+                "Country": "France"
+            }, {
+                "CustomerName": "Rattlesnake Canyon Grocery",
+                "City": "Albuquerque",
+                "Country": "USA"
+            }, {
+                "CustomerName": "Simons bistro",
+                "City": "København",
+                "Country": "Denmark"
+            }, {
+                "CustomerName": "The Big Cheese",
+                "City": "Portland",
+                "Country": "USA"
+            }, {
+                "CustomerName": "Vaffeljernet",
+                "City": "Århus",
+                "Country": "Denmark"
+            }, {
+                "CustomerName": "Wolski Zajazd",
+                "City": "Warszawa",
+                "Country": "Poland"
+            }]
+        };
+    </script>
 </head>
 
 <body>
@@ -127,7 +201,29 @@
 
                             </p>
 
+                            <div id="id01">
+                                {{firstName}} {{lastName}}
+                            </div>
 
+                            <script>
+                                var myObject = {
+                                    "firstName": "John",
+                                    "lastName": "Doe"
+                                };
+                                w3.displayObject("id01", myObject);
+                            </script>
+
+                            <h2>Testing W3.JS in HTML</h2>
+
+                            <div w3-include-html="list.html"></div>
+
+                            <script>
+                                w3.includeHTML(myCallback);
+
+                                function myCallback() {
+                                    w3.displayObject("id01", myObject);
+                                }
+                            </script>
                             <br>
                             <a href="#myModal" data-toggle="modal"> <button class="buttonb w3-border w3-round-large " "><span><b>Reservar</b> </span>
                                 </button><br>  <br></a>
@@ -162,6 +258,8 @@
 
                     </div>
                     <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+
+
                         Duis et consectetur metus. Donec felis libero, blandit quis diam efficitur, vulputate lacinia felis. Sed eget condimentum urna, a euismod quam. Aliquam sit amet libero porttitor, imperdiet orci id, consequat elit. Pellentesque metus ipsum, placerat aliquam
                         ipsum a, sodales blandit nunc. In finibus ligula eget purus ultrices, ac euismod odio condimentum. Integer nisi augue, ornare sit amet auctor eu, convallis at ligula. Nunc scelerisque feugiat dignissim. Vivamus et dui sit amet
                         magna hendrerit ultricies non ut justo.
