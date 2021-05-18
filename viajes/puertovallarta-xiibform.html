@@ -25,6 +25,7 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One">
     <link rel="stylesheet" href="https://www.xiiber.com/css/style_xiiber.css">
+    <link rel="stylesheet" href="https://www.xiiber.com/css/boton-principal.css">
 
     <style>
         .box-input {
@@ -64,6 +65,64 @@
             transition: .5s;
         }
     </style>
+    <style>
+        h2pride {
+            margin-top: 0%;
+            line-height: px;
+            font-size: 30px;
+            font-family: 'Paytone One', sans-serif;
+            text-align: center;
+            background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300px;
+            background-position: center 0%;
+            animation: background-slide 25s infinite linear;
+        }
+    </style>
+    <style>
+        /* Boton auto */
+        
+        .button-auto {
+            border-radius: 12px;
+            background-color: #FFFFFF;
+            border: none;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .button-auto span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button-auto span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button-auto:hover span {
+            padding-right: 25px;
+        }
+        
+        .button-auto:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
 
 </head>
 
@@ -76,7 +135,7 @@
         <p class=" w3-center "><b>¿Quieres ser de los primeros en conocer la nueva fecha de viaje?</b>
             <br>Déjamos tus datos para conocer el próximo viaje con un precio de preventa especial</p>
 
-        <br>
+
 
         <form id="formulario" class="formulario">
             <div class="box-input">
@@ -96,9 +155,7 @@
         </form>
 
 
-
-        <br>
-        <p class="w3-opacity w3-center "><i>Lo que pasa en Puerto Vallarta, se queda en Puerto Vallarta</i></p>
+        <p class="w3-opacity w3-center w3-small"><i>Lo que pasa en Puerto Vallarta, se queda en Puerto Vallarta</i></p>
     </div>
 
 
