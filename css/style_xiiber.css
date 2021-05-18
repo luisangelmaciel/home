@@ -30,6 +30,7 @@
     src: url(../lib/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../lib/fonts/fa-solid-900.woff2) format("woff2"), url(../lib/fonts/fa-solid-900.woff) format("woff"), url(../lib/fonts/fa-solid-900.ttf) format("truetype"), url(../lib/fonts/fa-solid-900.svg#fontawesome) format("svg")
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800;900&display=swap');
 p,
 h1,
 h2,
@@ -38,6 +39,30 @@ h4,
 h5,
 h6 {
     font-family: "Roboto", "Montserrat", "Lato", Arial, Helvetica, sans-serif
+}
+
+
+/* H1 Pride  */
+
+xiiber {
+    margin-top: 0%;
+    font-size: 50px;
+    line-height: 80px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400px;
+    background-position: center 0%;
+    animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+    100% {
+        background-position: -8160px;
+    }
 }
 
 
