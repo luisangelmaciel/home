@@ -1,0 +1,141 @@
+<!-- 
+    Diseñado por www.twitter.com/luisangelmaciel 
+    Potenciado por www.HiHello.monster
+    Para www.twitter.com/XiiberTravel
+-->
+
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <title>Hola 2022, 365 días para seguir viajando</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="es-mx">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible " content="IE=edge ">
+
+    <!-- HiHello.monster! Tag Manager -->
+    <meta name="author" content="Xiiber">
+    <meta name="keywords " content="Hola año 2022, Welcum 2022">
+    <meta name="description" content="Bye 2021, Hola 2022. 365 días para seguir viajando">
+    <meta name="rights" content="®Xiiber" />
+    <meta name="generator" content="HiHello.monster! - Content Management" />
+
+    <link rel="canonical" href="https://www.xiiber.com/hi2022.html" />
+    <link rel="icon" href="https://tepozspa.xiiber.com/fotos/ico.webp" sizes="192x192" id="favicon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://www.xiiber.com/logo_xiiber.css">
+
+    <style>
+        h1 {
+            text-align: center;
+            color: #FFF;
+            height: 140px;
+            width: 140px;
+            font-size: 3.2rem;
+            display: flow-root;
+            align-items: center;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato Black', sans-serif;
+        }
+        
+        body {
+            background-color: #0F4C75;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box {
+            position: relative;
+            background-color: #FFF;
+            color: #1B262C;
+            height: 140px;
+            width: 140px;
+            margin: 4px;
+            font-size: 3.2rem;
+            text-align: center;
+            box-shadow: 2px 12px 18px 4px #333;
+        }
+        
+        .box h4 {
+            position: absolute;
+            bottom: 0;
+            background-color: #3282B8;
+            width: 100%;
+            color: #FFF;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            padding: 8px 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Logo -->
+    <a onclick="document.location='https://www.xiiber.com/'" class="logo">
+        <img src="https://www.xiiber.com/sgv/ico.svg" alt="Xiiber Travel ">
+    </a>
+
+    <!-- partial:index.partial.html -->
+    <div class="timer">
+        <div class="box">
+            <h2 id="days"></h2>
+            <h4>Días</h4>
+        </div>
+        <div class="box">
+            <h2 id="hrs"></h2>
+            <h4>Horas</h4>
+        </div>
+        <div class="box">
+            <h2 id="mins"></h2>
+            <h4>Minutos</h4>
+        </div>
+        <div class="box">
+            <h2 id="secs"></h2>
+            <h4>Segundos</h4>
+        </div>
+    </div>
+    <!-- partial -->
+    <script>
+        var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+
+            document.getElementById("hrs").innerHTML = hours;
+
+            document.getElementById("mins").innerHTML = minutes;
+
+            document.getElementById("secs").innerHTML = seconds;
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
