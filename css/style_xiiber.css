@@ -657,48 +657,6 @@ cardflip2020:after {
 }
 
 
-/* Boton auto */
-
-.button-auto {
-    border-radius: 12px;
-    background-color: #FFFFFF;
-    border: none;
-    color: #000000;
-    text-align: center;
-    font-size: 14px;
-    padding: 12px;
-    width: 100%;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 10px;
-}
-
-.button-auto span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button-auto span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.button-auto:hover span {
-    padding-right: 25px;
-}
-
-.button-auto:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-
 /* Boton principal */
 
 .button {
@@ -1427,6 +1385,87 @@ cardflip2020:after {
 }
 
 .buttonb:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Boton principal */
+
+.button-auto {
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.button-auto span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-auto span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-auto:hover span {
+    padding-right: 25px;
+}
+
+.button-auto:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button-3col {
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px;
+    width: 90%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.button-3col span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-3col span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-3col:hover span {
+    padding-right: 25px;
+}
+
+.button-3col:hover span:after {
     opacity: 1;
     right: 0;
 }

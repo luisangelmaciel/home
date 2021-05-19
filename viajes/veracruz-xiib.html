@@ -97,7 +97,7 @@
                         </div>
                         <div class="box-input">
                             <input name="apellidos" id="apellidos" type="text" required>
-                            <span data-placeholder="Qué actividad y/o lugar te gustaría hacer en Puerto Vallarta"></span>
+                            <span data-placeholder="Qué actividad y/o lugar te gustaría hacer en Veracruz"></span>
                         </div>
 
                         <button class="button w3-border w3-round-large" style="vertical-align:middle" id="submit" type="submit" onclick="alert( 'A continuación se abrira whatsapp, solo dale enviar al mensaje que tendrá los datos que acabas de llenar. Gracias') "><i class="fab fa-whatsapp"></i> <span><b>Enviar por WhatsApp</b> </span></button><br>
@@ -105,7 +105,7 @@
                     <br>
 
                     <br>
-                    <p class="w3-opacity w3-center "><i>Lo que pasa en Puerto Vallarta, se queda en Puerto Vallarta</i></p>
+                    <p class="w3-opacity w3-center "><i>Lo que pasa en Veracruz, se queda en Veracruz</i></p>
                 </div>
 
             </div>
@@ -146,7 +146,7 @@
                 let nombre = document.querySelector('#nombre').value
                 let apellidos = document.querySelector('#apellidos').value
                 let email = document.querySelector('#email').value
-                let mensaje = 'send?phone=' + telefono + '&text=*_Hola, llene el formulario en la webapp de Xiiber. Por favor de notificarme el próximo viaje a Veracruz._*%0A*Mi nombre es*%0A' + nombre + '%0A*Mi email*%0A' + email + '%0A*La  actividad y/o lugar que me gustaría hacer en Acapulco es*%0A' + apellidos + ''
+                let mensaje = 'send?phone=' + telefono + '&text=*_Hola, llene el formulario en la webapp de Xiiber. Por favor de notificarme el próximo viaje a Veracruz._*%0A*Mi nombre es*%0A' + nombre + '%0A*Mi email*%0A' + email + '%0A*La  actividad y/o lugar que me gustaría hacer en Veracruz es*%0A' + apellidos + ''
                 if (isMobile()) {
                     window.open(urlMobile + mensaje, '_blank')
                 } else {
