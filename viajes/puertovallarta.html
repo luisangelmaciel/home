@@ -17,16 +17,44 @@
 
     <link rel="icon" href="https://www.xiiber.com/favicon.png" sizes="192x192">
 
-
+    <style>
+        /* Footerx  */
+        
+        .icon-bar {
+            width: 100%;
+            background-color: #ffffff;
+            overflow: auto position: fixed;
+            font-size: 20pt;
+        }
+        
+        .icon-bar a {
+            float: left;
+            width: 33%;
+            text-align: center;
+            padding: 0px 0;
+            transition: all 0.3s ease;
+            color: #bfbfbf;
+            background-color: #ffffff;
+        }
+        
+        .footerx {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            color: rgb(102, 102, 102);
+            padding-top: 10px;
+            padding-bottom: 1px;
+            text-align: center;
+            line-height: 0;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="w3-bar w3-card-2">
-        <a href="https://www.xiiber.com/viajes.html" class="w3-bar-item  w3-text-grey w3-hover-text-black  w3-large"><i class=" fas fa-suitcase-rolling ">Viajes </i></a>
-        <a href="https://www.xiiber.com/" onclick="document.location=''" class="w3-bar-item w3-text-grey w3-hover-text-black w3-right w3-large">Inicio <i class="fas fa-home"></i></a>
-        <span class="w3-bar-item"></span>
-    </div>
+
 
     <!-- partial:index.partial.html -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -48,52 +76,9 @@
                         w3.includeHTML();
                     </script>
 
-                    <div id="slider" class="owl-carousel product-slider">
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-00.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-01.webp" />
-                        </div>
-
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-02.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-03.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-02.webp" />
-                        </div>
-                    </div>
-                    <div id="thumb" class="owl-carousel product-thumb">
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-00.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-01.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-02.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-02.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-03.webp" />
-                        </div>
-                        <div class="item">
-                            <img src="https://www.xiiber.com/img/photo-preview-02.webp" alt="Preview" title="Preview" />
-                        </div>
-                    </div>
                 </div>
-                <br>
+
+
                 <div class="col-md-6 w3-card-2">
                     <div class="product-dtl">
                         <div class="product-info"><br>
@@ -239,7 +224,8 @@
                         <p>
                             <ul>
                                 <li>Donec elementum nisi vitae ex iaculis, fringilla pretium augue porttitor.</li>
-                                <li>Curabitur quis arcu elementum, iaculis lacus at, semper velit.</li>
+                                <div style="text-align:center;font-size:14px;">Hecho con ❤️ de ida y vuelta para ti</div>
+                                <div style="text-align:center;font-size:12px;padding-bottom:20px; "> <a href="https://www.xiiber.com/ " target="_blank " style="color:#685758;font-weight:bold; ">Copyright © 2012-2020 Xiiber Travel</a></div>
                             </ul>
                         </p>
 
@@ -247,9 +233,20 @@
                 </div>
             </div>
 
-            <div style="text-align:center;font-size:14px;">Hecho con ❤️ de ida y vuelta para ti</div>
-            <div style="text-align:center;font-size:12px;padding-bottom:20px; "> <a href="https://www.xiiber.com/ " target="_blank " style="color:#685758;font-weight:bold; ">Copyright © 2012-2020 Xiiber Travel</a></div>
 
+            <div class="footerx ">
+                <div class="icon-bar ">
+
+
+                    <a onclick="document.location='https://www.xiiber.com/viajes.html' "><img src="https://www.xiiber.com/sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
+                    </a>
+                    <a onclick="document.location='https://www.xiiber.com' "><img src="https://www.xiiber.com/sgv/home.webp " alt="Home " height="33w " width="33w " class="w3-hover-opacity ">
+                    </a>
+                    <a onclick="document.location='https://www.xiiber.com/experiencias' "><img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Experiencias " height="33w " width="33w " class="w3-hover-opacity ">
+                    </a>
+
+                </div>
+            </div>
 
 
         </div>
