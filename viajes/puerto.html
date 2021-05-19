@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <meta charset="UTF-8">
     <title>Puerto Vallarta</title>
@@ -20,7 +21,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap " rel="stylesheet ">
 
-
+    <style>
+        .modal-fullscreen {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -118,8 +127,13 @@
 
 
                             <br>
-                            <a href="puertovallarta-xiib.html"> <button class="buttonb w3-border w3-round-large " "><span><b>Reservar</b> </span>
-                                </button><br>  <br></a>
+
+                            <button class="buttonb w3-border w3-round-large " data-toggle="modal" data-target="#modal-fullscreen"><span><b>Reservar</b> </span>
+                                </button>
+
+
+
+
                             <b>Medios de pago</b><br><br>
                             <img src="https://www.xiiber.com/img/pagos-aceptados.png" width="512w" height="34w" alt="Photo" title="Photo - preview"><br><br><br>
                         </div>
@@ -246,6 +260,21 @@
             <div style="text-align:center;font-size:12px;padding-bottom:20px; "> <a href="https://www.xiiber.com/ " target="_blank " style="color:#685758;font-weight:bold; ">Copyright © 2012-2020 Xiiber Travel</a></div>
 
 
+
+
+            <!-- Modal-Fullscreen -->
+            <div class="modal fade modal-fullscreen" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <iframe src="https://ww.xiiber.com/viajes/puertovallarta-xiib.html " " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
 
         </div>
     </div>

@@ -65,7 +65,8 @@
     <!-- Modal -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style_xiiber.css">
     <link rel="stylesheet" href="./logo_xiiber.css">
@@ -116,6 +117,7 @@
         }
     </style>
 
+
     <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="jqjs.js" type="application/json"></script>
 
@@ -162,10 +164,10 @@
                     </form>
                     <br>
 
-
-
                     <br>
                     <p class="w3-opacity w3-center "><i>Lo que pasa en Puerto Vallarta, se queda en Puerto Vallarta</i></p>
+
+
                 </div>
 
             </div>
@@ -177,87 +179,61 @@
     </div>
     <br><br><br><br><br><br><br><br>
     <!-- Footerx -->
-    <div id="footerx"> </div>
-
-    <button data-toggle="modal" data-target="#modal-fullscreen"> <a class="w3-button  w3-circle  " style="position:fixed;top:60px;right:40px; "><i class="fas fa-ellipsis-v"></i></a> </button>
-
-    <!-- Modal-Fullscreen -->
-    <div class="modal fade modal-fullscreen" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <iframe src="secciones.html " " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
- 
-
-         
-
-
-            <div class="modal fade modal-fullscreenx " id="alertas " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel " aria-hidden="true ">
-                <div class="modal-dialog ">
-
-                    <div class="modal-content ">
-                        <div class="modal-body ">
-                            <button type="button " class="close " data-dismiss="modal " aria-hidden="true ">&times;</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
 
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
-            <script src="./progress.js "></script>
-            <script src="./acordion.js "></script>
-            <script src="./agotado.js "></script>
-            
 
-                   
-            <script>
-                function isMobile() {
-                    if (sessionStorage.desktop)
-                        return false;
-                    else if (localStorage.mobile)
-                        return true;
-                    var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
-                    for (var i in mobile)
-                        if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
-                    return false;
+
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="./progress.js "></script>
+    <script src="./acordion.js "></script>
+
+
+
+
+    <script>
+        function isMobile() {
+            if (sessionStorage.desktop)
+                return false;
+            else if (localStorage.mobile)
+                return true;
+            var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
+            for (var i in mobile)
+                if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+            return false;
+        }
+
+        const formulario = document.querySelector('#formulario');
+        const buttonSubmit = document.querySelector('#submit');
+        const urlDesktop = 'https://web.whatsapp.com/';
+        const urlMobile = 'whatsapp://';
+        const telefono = '525539793727';
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault()
+            buttonSubmit.innerHTML = '<i class="fas fa-circle-notch fa-spin "></i>'
+            buttonSubmit.disabled = true
+            setTimeout(() => {
+                let nombre = document.querySelector('#nombre').value
+                let apellidos = document.querySelector('#apellidos').value
+                let email = document.querySelector('#email').value
+                let mensaje = 'send?phone=' + telefono + '&text=*_Hola, llene el formulario en la webapp de Xiiber. Por favor de notificarme el próximo viaje a Puerto Vallarta._*%0A*Mi nombre es*%0A' + nombre + '%0A*Mi email*%0A' + email + '%0A*La  actividad y/o lugar que me gustaría hacer en Acapulco es*%0A' + apellidos + ''
+                if (isMobile()) {
+                    window.open(urlMobile + mensaje, '_blank')
+                } else {
+                    window.open(urlDesktop + mensaje, '_blank')
                 }
-        
-                const formulario = document.querySelector('#formulario');
-                const buttonSubmit = document.querySelector('#submit');
-                const urlDesktop = 'https://web.whatsapp.com/';
-                const urlMobile = 'whatsapp://';
-                const telefono = '525539793727';
-        
-                formulario.addEventListener('submit', (event) => {
-                    event.preventDefault()
-                    buttonSubmit.innerHTML = '<i class="fas fa-circle-notch fa-spin "></i>'
-                    buttonSubmit.disabled = true
-                    setTimeout(() => {
-                        let nombre = document.querySelector('#nombre').value
-                        let apellidos = document.querySelector('#apellidos').value
-                        let email = document.querySelector('#email').value
-                        let mensaje = 'send?phone=' + telefono + '&text=*_Hola, llene el formulario en la webapp de Xiiber. Por favor de notificarme el próximo viaje a Puerto Vallarta._*%0A*Mi nombre es*%0A' + nombre + '%0A*Mi email*%0A' + email + '%0A*La  actividad y/o lugar que me gustaría hacer en Acapulco es*%0A' + apellidos + ''
-                        if (isMobile()) {
-                            window.open(urlMobile + mensaje, '_blank')
-                        } else {
-                            window.open(urlDesktop + mensaje, '_blank')
-                        }
-                        buttonSubmit.innerHTML = '<i class="fab fa-whatsapp "></i> Enviar WhatsApp'
-                        buttonSubmit.disabled = false
-                    }, 3000);
-                });
-</script>
+                buttonSubmit.innerHTML = '<i class="fab fa-whatsapp "></i> Enviar WhatsApp'
+                buttonSubmit.disabled = false
+            }, 3000);
+        });
+    </script>
 
 </html>

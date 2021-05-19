@@ -44,8 +44,28 @@ h6 {
 
 /* H1 Pride  */
 
-xiiber {
+xiiber-pride {
     margin-top: 0%;
+    font-size: 50px;
+    line-height: 80px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400px;
+    background-position: center 0%;
+    animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+    100% {
+        background-position: -8160px;
+    }
+}
+
+xiiber {
     font-size: 50px;
     line-height: 80px;
     font-family: 'Montserrat Alternates', sans-serif;
