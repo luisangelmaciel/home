@@ -16,6 +16,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,11 +26,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
 <link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap " rel="stylesheet ">
 
-
-
 <style>
     body {
-        font-family: "Roboto", "Lato", sans-serif
+        font-family: "Roboto", sans-serif
     }
 </style>
 <style>
@@ -234,17 +234,11 @@
     }
 </style>
 
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#xiibertwitter").load("");
-    });
-</script>
 
 
 <body>
 
-    <div id="xiibertwitter"> </div>
+
 
     <!-- Navbar -->
     <a onclick="document.getElementById( 'ticketModal').style.display='block' "><img src="sgv/elipsis.webp " class="w3-hover-opacity " alt="Xiiber Travel " width="47 " height="68 " title="Viajes Xiiber" style="position:fixed;top:60px;right:40px; "></a>
@@ -256,56 +250,44 @@
         </div>
     </div>
 
-    <div id="destino ">
-        {{destino}}
-    </div>
 
-    <div id="lugar ">
-        {{lugar}}
-    </div>
+    <!-- Page content -->
+    <div class="w3-content " style="max-width:2000px;margin-top:46px ">   
 
-    <div id="precio ">
-        {{precio}}
+     
+<!-- templete 1  -->
+<div class="w3-white " id="howto_padding ">
+    <div class="w3-content w3-hide-device ">
+        <div class="w3-row-padding " style="margin:32px -16px ">
+            <div class="w3-col l6 s12 ">
+                <!-- Blog entries -->
+                <div class="w3-card-4 w3-margin w3-white ">
+                    <img src="/w3images/woods.jpg " alt="Nature " style="width:100% ">
+                </div>
+                <!-- Blog entries -->
+            </div>
+            <div class="w3-col l6 ">
+                <!-- Blog entries -->
+                <div class="w3-card-4 w3-margin w3-white ">
+                                        <img src="/w3images/woods.jpg " alt="Nature " style="width:100% ">
+                </div>        
+                <!-- Blog entries -->        
+            </div>
+        </div>
     </div>
+</div>
+ <!-- templete 1 -->
 
-    <div id="info ">
-        {{info}}
-    </div>
 
-    <div id="detalles ">
-        {{detalles}}
-    </div>
+</div>
 
-    <div id="reserva ">
-        {{reserva}}
-    </div>
-
-    <div id="faq ">
-        {{faq}}
-    </div>
-
+    <div w3-include-HTML="tabs.html "></div>
+    <div w3-include-HTML="content.html "></div>
     
     <script>
-        var myObject = {
-            "destino ": "Tepoztlán, Morelos ",
-            "lugar ": "Viaje en grupo ",
-            "precio ": "$650 ",
-            "info ": "info ",
-            "detalles ": "detalles ",
-            "reserva ": "reserva ",
-            "faq ": "faq "
-        };
-
-
-        w3.displayObject("destino ", myObject);
-        w3.displayObject("lugar ", myObject);
-        w3.displayObject("precio ", myObject);
-        w3.displayObject("info ", myObject);
-        w3.displayObject("detalles ", myObject);
-        w3.displayObject("reserva ", myObject);
-        w3.displayObject("faq ", myObject);
+    w3.includeHTML();
     </script>
- 
+
 
     <!-- Footerx -->
     <div class="footerx ">
@@ -316,15 +298,15 @@
             <a onclick="document.location='https://www.xiiber.com/notificaciones.html' "><img src="sgv/notificaciones.webp " alt="Notificaciones " height="33w " width="33w " class="w3-hover-opacity ">
                 <p style="color: grey; font-size: small; text-align: center; ">Notificaciones</p>
             </a>
-            <a onclick="document.location='https://www.xiiber.com/viajes.html' "><img src="sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
-                <p style="color: grey; font-size: small; text-align: center; ">Viajes</p>
-            </a>
+            <a onclick="w3.hide( 'p') "><img src="sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
+                    <p style="color: grey; font-size: small; text-align: center; ">Viajes</p>
+                    </a>
             <a onclick="document.location='https://www.xiiber.com/experiencias' "><img src="sgv/experiencias.webp " alt="Experiencias " height="33w " width="33w " class="w3-hover-opacity ">
-                <p style="color: grey; font-size: small; text-align: center; ">Experiencias</p>
-            </a>
+                        <p style="color: grey; font-size: small; text-align: center; ">Experiencias</p>
+                    </a>
             <a onclick="document.location='https://www.xiiber.com/2021/2021.html' "><img src="sgv/calendario.webp " alt="Calendario " height="33w " width="33w " class="w3-hover-opacity ">
-                <p style="color: grey; font-size: small; text-align: center; ">Calendario</p>
-            </a>
+                        <p style="color: grey; font-size: small; text-align: center; ">Calendario</p>
+                    </a>
         </div>
     </div>
 </body>
