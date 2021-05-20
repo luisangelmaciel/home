@@ -12,14 +12,17 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<title>Viajes a Tepoztlán, Morelos</title>
+<title></title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="preconnect " href="https://fonts.gstatic.com ">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
-<link rel="icon" href="https://www.xiiber.com/favicon.png" sizes="192x192">
+<link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap " rel="stylesheet ">
 
 <style>
     body {
@@ -37,7 +40,7 @@
         text-align: center;
         font-size: 14px;
         padding: 12px;
-        width: 300px;
+        width: auto;
         transition: all 0.5s;
         cursor: pointer;
         margin: 0px;
@@ -64,6 +67,45 @@
     }
     
     .button-auto:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .button-3col {
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 14px;
+        padding: 12px;
+        width: 90%;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 0px;
+    }
+    
+    .button-3col span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button-3col span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button-3col:hover span {
+        padding-right: 25px;
+    }
+    
+    .button-3col:hover span:after {
         opacity: 1;
         right: 0;
     }
@@ -109,6 +151,51 @@
         padding: 0;
     }
 </style>
+<style>
+    /* H1 Pride  */
+    
+    h1pride {
+        margin-top: 0%;
+        line-height: 100px;
+        font-size: 80px;
+        font-family: 'Paytone One', sans-serif;
+        text-align: center;
+        background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400px;
+        background-position: center 0%;
+        animation: background-slide 25s infinite linear;
+    }
+    
+    @keyframes background-slide {
+        100% {
+            background-position: -8160px;
+        }
+    }
+    
+    h2pride {
+        margin-top: 0%;
+        line-height: 90px;
+        font-size: 50px;
+        font-family: 'Paytone One', sans-serif;
+        text-align: center;
+        background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300px;
+        background-position: center 0%;
+        animation: background-slide 25s infinite linear;
+    }
+    
+    @keyframes background-slide {
+        100% {
+            background-position: -8160px;
+        }
+    }
+</style>
 <style type="text/css" media="screen">
     A:link {
         text-decoration: none;
@@ -146,12 +233,13 @@
 </style>
 
 
+
 <body>
 
 
 
     <!-- Navbar -->
-    <a onclick="document.getElementById( 'ticketModal').style.display='block' "><img src="https://www.xiiber.com/sgv/elipsis.webp " class="w3-hover-opacity " alt="Xiiber Travel " width="33 " height="33 " title="Viajes Xiiber" style="position:fixed;top:60px;right:40px; "></a>
+    <a onclick="document.getElementById( 'ticketModal').style.display='block' "><img src="https://www.xiiber.com/sgv/elipsis.webp " class="w3-hover-opacity " alt="Xiiber Travel " width="33w " height="33w " title="Viajes Xiiber" style="position:fixed;top:60px;right:40px; "></a>
     <!-- Navbar Modal -->
     <div id="ticketModal" class="w3-modal modal-fullscreen ">
         <div class=" w3-animate-top  ">
@@ -159,29 +247,50 @@
             <iframe src="https://www.xiiber.com/secciones.html" " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
         </div>
     </div>
-    
-      
-     
 
+ 
     <!-- Page content -->
-    <div class="w3-content " style="max-width:2000px;margin-top:46px ">   
 
-  <!-- tepoztlán -->
-</div> <!-- Info general Section -->
-<div class="w3-container w3-content w3-center w3-padding-64 " style="max-width:800px " >
-    <a href="https://www.xiiber.com/viajes/tepozspa.html ">  
-        <button class="button-auto w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById( 'https://www.xiiber.com/viajes/tepozspa.html').style.display='block' "><span><b>Tepozspa</b> </span></button><br><br>
-    </a>   
-    <a href="https://www.xiiber.com/viajes/tepozspasadonajuana.html ">  
-    <button class="button-auto w3-border w3-round-large " style="vertical-align:middle " onclick="document.getElementById( 'https://www.xiiber.com/viajes/casadonajuana.html').style.display='block' "><span><b>Casa Doña Juana</b> </span></button><br></div>
-</a>   
-<!-- tepoztlán -->
+    <!-- templete  -->
+    <div class="w3-white " id="howto_padding ">
 
-  
-        
+ 
+
+    <!-- post -->
+    <div class="w3-container w3-content w3-padding-64 " style="max-width:800px " >
+        <div class="w3-margin ">
+       
+                <h4></h4>
+            </div>
+            <ul class="w3-ul w3-hoverable w3-white ">
+                
+            <li class="w3-padding-16 ">
+                <img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Image " class="w3-left w3-margin-right " style="width:50px ">
+                <span class="w3-large ">Ipsum</span><br>
+                <span>Praes tinci sed</span>
+            </li>
+            <li class="w3-padding-16 ">
+                <img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Image " class="w3-left w3-margin-right " style="width:50px ">
+                <span class="w3-large ">Dorum</span><br>
+                <span>Ultricies congue</span>
+            </li>
+            <li class="w3-padding-16 w3-hide-medium ">
+                <img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Image " class="w3-left w3-margin-right " style="width:50px ">
+                <span class="w3-large ">Mingsum</span><br>
+                <span>Lorem ipsum dipsum</span>
+            </li>
+
+            </ul>
+      
+        <!-- Page content -->
+
     </div>
     <!-- End Page Content -->
- 
+
+
+
+
+
 
     <!-- Footerx -->
     <div class="footerx ">
@@ -192,19 +301,19 @@
             <a onclick="document.location='https://www.xiiber.com/notificaciones.html' "><img src="https://www.xiiber.com/sgv/notificaciones.webp " alt="Notificaciones " height="33w " width="33w " class="w3-hover-opacity ">
                 <p style="color: grey; font-size: small; text-align: center; ">Notificaciones</p>
             </a>
-            <a onclick="document.location='https://www.xiiber.com/notificaciones.html' "><img src="https://www.xiiber.com/sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
-                    <p style="color: grey; font-size: small; text-align: center; ">Viajes</p>
+            <a onclick="document.location='https://www.xiiber.com/viajess.html' "><img src="https://www.xiiber.com/sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
+                <p style="color: grey; font-size: small; text-align: center; ">Viajes</p>
             </a>
             <a onclick="document.location='https://www.xiiber.com/experiencias' "><img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Experiencias " height="33w " width="33w " class="w3-hover-opacity ">
-                        <p style="color: grey; font-size: small; text-align: center; ">Experiencias</p>
+                <p style="color: grey; font-size: small; text-align: center; ">Experiencias</p>
             </a>
             <a onclick="document.location='https://www.xiiber.com/2021/2021.html' "><img src="https://www.xiiber.com/sgv/calendario.webp " alt="Calendario " height="33w " width="33w " class="w3-hover-opacity ">
-                        <p style="color: grey; font-size: small; text-align: center; ">Calendario</p
+                <p style="color: grey; font-size: small; text-align: center; ">Calendario</p>
             </a>
         </div>
     </div>
-</body>
+    <!-- fin Footerx -->
 
-</html>
+</body>
 
 </html>
