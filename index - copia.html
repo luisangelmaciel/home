@@ -12,9 +12,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
-<title>Experiencias y viajes gay en la CDMX</title>
-
+<title>Destinos | Viajes gay Xiiber</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,7 +37,7 @@
         text-align: center;
         font-size: 14px;
         padding: 12px;
-        width: 200px;
+        width: 300px;
         transition: all 0.5s;
         cursor: pointer;
         margin: 0px;
@@ -158,10 +156,90 @@
     <div id="ticketModal" class="w3-modal modal-fullscreen ">
         <div class=" w3-animate-top  ">
             <span onclick="document.getElementById('ticketModal').style.display='none'" class="w3-button  w3-xlarge w3-display-topright">&times;</span>
-            <iframe src="https://www.xiiber.com/secciones.html" " name="iframe_a " height="600px " width="100% " title="Secciones " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
+            <iframe src="https://www.xiiber.com/secciones.html" " name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
         </div>
     </div>
 
+    <p>The time is @DateTime.Now</p>
+
+    @{
+if (IsPost)
+{ 
+string companyname = Request["CompanyName "]; 
+string contactname = Request["ContactName "]; 
+<p>You entered: <br> 
+Company Name: @companyname <br> 
+Contact Name: @contactname </p> 
+}
+else
+{
+<form method="post " action=" ">
+Company Name:<br> 
+<input type="text " name="CompanyName " value=" "><br>
+Contact Name:<br><br>
+<input type="text " name="ContactName " value=" "><br><br>
+<input type="submit " value="Submit " class="submit ">
+</form> 
+}
+}
+
+@RenderPage ("header.cshtml ")
+<h1> Hello Web Pages </h1>
+<p> Este es un párrafo </p>
+@RenderPage ("footerx.cshtml ")
+
+<!-- ejemplo de hoy es --> 
+@{
+var message=" ";
+var weekday=DateTime.Now.DayOfWeek;
+var day=weekday.ToString();
+}
+<html>
+<body>
+@switch(day)
+{
+case "Monday ":
+    message="This is the first weekday. ";
+    break;
+case "Thursday ":
+    message="Only one day before weekend. ";
+    break;
+case "Friday ":
+    message="Tomorrow is weekend! ";
+    break;
+default:
+    message="Today is " + day;
+    break;
+}
+<p>@message</p>
+
+<!-- buenas noches o dias segun la hora -->
+@{
+    var txt = " ";
+    if(DateTime.Now.Hour > 12)
+    {txt = "Good Evening ";}
+    else
+    {txt = "Good Morning ";}
+    }
+   
+    ◉
+    '&#x1f4cc;'sería uno de ellos. - J0ANMM 19/12/2016 a las 16:58
+12
+¿Qué hay de este? 📍 ( &#x1F4CD;)
+    <!-- Inline expression or variable --> 
+<p>The value of myMessage is: @myMessage</p> 
+ 
+<!-- Multi-statement block --> 
+@Code
+dim greeting = "Welcome to our site! " 
+dim weekDay = DateTime.Now.DayOfWeek 
+dim greetingMessage = greeting & " Here in Huston it is: " & weekDay
+End Code
+
+<p>The greeting is: @greetingMessage</p>
+
+    <p>The message is @txt</p>
+    
 
     <!-- Page content -->
     <div class="w3-content " style="max-width:2000px;margin-top:46px ">   
@@ -169,12 +247,30 @@
   <!-- viajes -->
 </div> <!-- Info general Section -->
 <div class="w3-container w3-content w3-center w3-padding-64 " style="max-width:800px " >
-    <a href="https://www.xiiber.com/experiencias/rutagastronomica.html ">
-      <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Ruta gastronómica</b> </span></button><br><br>
+    <a href="https://www.xiiber.com/viajes/tepoztlan.html ">
+      <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Tepoztlán</b> </span></button><br><br>
     </a>    
-    <a href="https://www.xiiber.com/experiencias/Underground.html ">
-       <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Underground</b> </span></button><br><br>
+    <a href="https://www.xiiber.com/viajes/tepozspa.html ">
+       <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Tepozspa</b> </span></button><br><br>
+    </a>
+    <a href="https://www.xiiber.com/viajes/casadonajuana.html ">
+        <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Casa Doña Juana</b> </span></button><br><br>
     </a>    
+      <a href="https://www.xiiber.com/viajes/acapulco.html ">
+        <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Acapulco</b> </span></button><br><br>
+      </a>    
+      <a href="https://www.xiiber.com/viajes/puertovallarta.html ">
+         <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Puerto Vallarta</b> </span></button><br><br>
+      </a>
+      <a href="https://www.xiiber.com/viajes/zipolite.html ">
+          <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Zipolite</b> </span></button><br><br>
+      </a>    
+      <a href="https://www.xiiber.com/viajes/veracruz.html ">
+        <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>Veracruz</b> </span></button><br><br>
+    </a>        
+    <a href="https://www.xiiber.com/viajes/cdmx.html ">
+        <button class="button-auto w3-border w3-round-large " style="vertical-align:middle "><span><b>CDMX</b> </span></button><br><br>
+    </a>  
 </div>
 <!--fin viajes -->
 
