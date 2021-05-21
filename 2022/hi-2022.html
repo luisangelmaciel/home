@@ -15,6 +15,7 @@
     <meta http-equiv="Content-Language" content="es-mx">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible " content="IE=edge ">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- HiHello.monster! Tag Manager -->
     <meta name="author" content="Xiiber">
@@ -90,52 +91,52 @@
     <a onclick="document.location='https://www.xiiber.com/'" class="logo">
         <img src="https://www.xiiber.com/sgv/ico.svg" alt="Xiiber Travel ">
     </a>
+    <div class="w3-container w3-responsive">
+        <!-- partial:index.partial.html -->
+        <div class="timer">
+            <div class="box">
+                <h2 id="days"></h2>
+                <h4>Días</h4>
+            </div>
+            <div class="box">
+                <h2 id="hrs"></h2>
+                <h4>Horas</h4>
+            </div>
+            <div class="box">
+                <h2 id="mins"></h2>
+                <h4>Minutos</h4>
+            </div>
+            <div class="box">
+                <h2 id="secs"></h2>
+                <h4>Segundos</h4>
+            </div>
+        </div>
+        <!-- partial -->
+        <script>
+            var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
 
-    <!-- partial:index.partial.html -->
-    <div class="timer">
-        <div class="box">
-            <h2 id="days"></h2>
-            <h4>Días</h4>
-        </div>
-        <div class="box">
-            <h2 id="hrs"></h2>
-            <h4>Horas</h4>
-        </div>
-        <div class="box">
-            <h2 id="mins"></h2>
-            <h4>Minutos</h4>
-        </div>
-        <div class="box">
-            <h2 id="secs"></h2>
-            <h4>Segundos</h4>
-        </div>
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+
+                document.getElementById("hrs").innerHTML = hours;
+
+                document.getElementById("mins").innerHTML = minutes;
+
+                document.getElementById("secs").innerHTML = seconds;
+            }, 1000);
+        </script>
     </div>
-    <!-- partial -->
-    <script>
-        var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
-
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = days;
-
-            document.getElementById("hrs").innerHTML = hours;
-
-            document.getElementById("mins").innerHTML = minutes;
-
-            document.getElementById("secs").innerHTML = seconds;
-        }, 1000);
-    </script>
-
 </body>
 
 </html>
