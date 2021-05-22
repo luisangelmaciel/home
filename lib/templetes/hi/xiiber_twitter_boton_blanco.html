@@ -18,8 +18,8 @@
             position: absolute;
             width: 200px;
             height: 50px;
-            box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
-            background: rgba(0, 0, 0, 0.3);
+            box-shadow: inset -7px 0px 12px -8px rgba(255, 255, 255, 0.3), inset 7px 0px 12px -8px rgba(255, 255, 255, 0.3);
+            background: none;
             -webkit-transition: background 400ms ease-in-out;
             -moz-transition: background 400ms ease-in-out;
             -ms-transition: background 400ms ease-in-out;
@@ -32,7 +32,7 @@
         }
         
         .trapdoor:hover .door {
-            box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 10px -2px none;
             -webkit-transform: scale(1.08);
             -moz-transform: scale(1.08);
             -ms-transform: scale(1.08);
@@ -75,11 +75,11 @@
         }
         
         .door {
-            -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
-            -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
-            -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
-            -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
-            transition: top 400ms, box-shadow 200ms, transform 300ms;
+            -webkit-transition: top 400ms, box-shadow 000ms, -webkit-transform 300ms;
+            -moz-transition: top 400ms, box-shadow 000ms, -moz-transform 300ms;
+            -ms-transition: top 400ms, box-shadow 000ms, -ms-transform 300ms;
+            -o-transition: top 400ms, box-shadow 0000ms, -o-transform 300ms;
+            transition: top 400ms, box-shadow 000ms, transform 300ms;
             -webkit-transition-timing-function: ease-in-out;
             -moz-transition-timing-function: ease-in-out;
             -ms-transition-timing-function: ease-in-out;
@@ -113,18 +113,12 @@
             font-style: normal;
         }
     </style>
-    <!-- <script type="application/json" src="jqjs.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $("#xiiber_twitter_boton_blanco").load("xiiber_twitter_boton_blanco.html");
-        });
-    </script> -->
 </head>
 
 <body>
 
-    <!--   <div id="xiiber_twitter_boton_blanco"> </div> -->
+
 
 
     <div class="trapdoor">
