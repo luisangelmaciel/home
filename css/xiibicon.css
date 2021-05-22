@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'xiibicon';
-    src: url('https://www.xiiber.com/lib/fonts/xiibicon/xiibicon.eot?g7an2r');
-    src: url('https://www.xiiber.com/lib/fonts/xiibicon/xiibicon.eot?g7an2r#iefix') format('embedded-opentype'), url('https://www.xiiber.com/lib/fonts/xiibicon/xiibicon.ttf?g7an2r') format('truetype'), url('https://www.xiiber.com/lib/fonts/xiibicon/xiibicon.woff?g7an2r') format('woff'), url('https://www.xiiber.com/lib/fonts/xiibicon/xiibicon.svg?g7an2r#xiibicon') format('svg');
+    src: url('https://www.xiiber.com/lib/fonts/xiibicon.eot?38r2qz');
+    src: url('https://www.xiiber.com/lib/fonts/xiibicon.eot?38r2qz#iefix') format('embedded-opentype'), url('https://www.xiiber.com/lib/fonts/xiibicon.ttf?38r2qz') format('truetype'), url('https://www.xiiber.com/lib/fonts/xiibicon.woff?38r2qz') format('woff'), url('https://www.xiiber.com/lib/fonts/xiibicon.svg?38r2qz#xiibicon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -22,287 +22,286 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-drink:before {
+.icon-sitemap:before {
     content: "\e900";
 }
 
-.icon-drink1:before {
+.icon-error:before {
     content: "\e901";
 }
 
-.icon-coffee:before {
+.icon-error_outline:before {
     content: "\e902";
 }
 
-.icon-mug:before {
+.icon-content_copy:before {
     content: "\e903";
 }
 
-.icon-icecream:before {
+.icon-directions_bike:before {
     content: "\e904";
 }
 
-.icon-cake:before {
+.icon-directions_bus:before {
     content: "\e905";
 }
 
-.icon-pacman:before {
+.icon-directions_ferry:before {
     content: "\e906";
 }
 
-.icon-sitemap:before {
+.icon-local_grocery_store:before {
     content: "\e907";
 }
 
-.icon-gamepad:before {
+.icon-directions_run:before {
     content: "\e908";
 }
 
-.icon-pil:before {
+.icon-departure_board:before {
     content: "\e909";
 }
 
-.icon-injection:before {
+.icon-fastfood:before {
     content: "\e90a";
 }
 
-.icon-bike:before {
+.icon-menu:before {
     content: "\e90b";
 }
 
-.icon-bus:before {
+.icon-keyboard_control:before {
     content: "\e90c";
 }
 
-.icon-compass:before {
+.icon-more_vert:before {
     content: "\e90d";
 }
 
-.icon-heart:before {
+.icon-arrow_back_ios:before {
     content: "\e90e";
 }
 
-.icon-clipboard:before {
+.icon-arrow_forward_ios:before {
     content: "\e90f";
 }
 
-.icon-rainbow:before {
+.icon-cake:before {
     content: "\e910";
 }
 
-.icon-sunglasses:before {
+.icon-star:before {
     content: "\e911";
 }
 
-.icon-sunglasses1:before {
+.icon-star_outline:before {
     content: "\e912";
 }
 
-.icon-middle-finger:before {
+.icon-account_circle:before {
     content: "\e913";
 }
 
-.icon-middle-finger1:before {
+.icon-favorite:before {
     content: "\e914";
 }
 
-.icon-one-finger-swipe-left:before {
+.icon-favorite_outline:before {
     content: "\e915";
 }
 
-.icon-one-finger-swipe-left1:before {
+.icon-touch_app:before {
     content: "\e916";
 }
 
-.icon-one-finger-swipe-right:before {
+.icon-motorcycle:before {
     content: "\e917";
 }
 
-.icon-one-finger-swipe-right1:before {
+.icon-pets:before {
     content: "\e918";
 }
 
-.icon-bitcoin:before {
+.icon-rowing:before {
     content: "\e919";
-    color: #f7931a;
 }
 
-.icon-facebook:before {
+.icon-add_business:before {
     content: "\e91a";
-    color: #1877f2;
-}
-
-.icon-github:before {
-    content: "\e91b";
-}
-
-.icon-google:before {
-    content: "\e91c";
-    color: #4285f4;
-}
-
-.icon-googlepay:before {
-    content: "\e91d";
-    color: #5f6368;
-}
-
-.icon-paypal:before {
-    content: "\e91e";
-    color: #00457c;
-}
-
-.icon-pinterest:before {
-    content: "\e91f";
-    color: #bd081c;
-}
-
-.icon-teradata:before {
-    content: "\e920";
-    color: #f37440;
-}
-
-.icon-tiktok:before {
-    content: "\e921";
-}
-
-.icon-tripadvisor:before {
-    content: "\e922";
-    color: #00af87;
-}
-
-.icon-tumblr:before {
-    content: "\e923";
-    color: #36465d;
-}
-
-.icon-twitter:before {
-    content: "\e924";
-    color: #1da1f2;
-}
-
-.icon-uber:before {
-    content: "\e925";
-}
-
-.icon-ubereats:before {
-    content: "\e926";
-    color: #5fb709;
-}
-
-.icon-whatsapp:before {
-    content: "\e927";
-    color: #25d366;
-}
-
-.icon-youtube:before {
-    content: "\e928";
-    color: #f00;
-}
-
-.icon-xiiber-hi:before {
-    content: "\e929";
-}
-
-.icon-error:before {
-    content: "\e92a";
-}
-
-.icon-warning:before {
-    content: "\e92b";
-}
-
-.icon-location_on:before {
-    content: "\e92c";
-}
-
-.icon-content_copy:before {
-    content: "\e92d";
-}
-
-.icon-directions_bike:before {
-    content: "\e92e";
-}
-
-.icon-local_pizza:before {
-    content: "\e92f";
-}
-
-.icon-local_restaurant:before {
-    content: "\e930";
-}
-
-.icon-restaurant:before {
-    content: "\e931";
-}
-
-.icon-train:before {
-    content: "\e932";
-}
-
-.icon-departure_board:before {
-    content: "\e933";
-}
-
-.icon-fastfood:before {
-    content: "\e934";
-}
-
-.icon-check:before {
-    content: "\e935";
-}
-
-.icon-cake1:before {
-    content: "\e936";
-}
-
-.icon-star:before {
-    content: "\e937";
-}
-
-.icon-star_outline:before {
-    content: "\e938";
-}
-
-.icon-favorite:before {
-    content: "\e939";
-}
-
-.icon-touch_app:before {
-    content: "\e93a";
-}
-
-.icon-pets:before {
-    content: "\e93b";
-}
-
-.icon-swipe:before {
-    content: "\e93c";
-}
-
-.icon-wb_twighlight:before {
-    content: "\e93d";
-}
-
-.icon-emoji_people:before {
-    content: "\e93e";
-}
-
-.icon-beach_access:before {
-    content: "\e93f";
 }
 
 .icon-location_pin:before {
-    content: "\e940";
+    content: "\e91b";
+}
+
+.icon-person_add_alt_1:before {
+    content: "\e91c";
+}
+
+.icon-person_remove:before {
+    content: "\e91d";
+}
+
+.icon-person_search:before {
+    content: "\e91e";
+}
+
+.icon-self_improvement:before {
+    content: "\e91f";
+}
+
+.icon-soap:before {
+    content: "\e920";
+}
+
+.icon-sports_bar:before {
+    content: "\e921";
 }
 
 .icon-tapas:before {
-    content: "\e941";
+    content: "\e922";
 }
 
-.icon-elderly:before {
-    content: "\e942";
+.icon-verified:before {
+    content: "\e923";
+}
+
+.icon-wash:before {
+    content: "\e924";
+}
+
+.icon-wheelchair_pickup:before {
+    content: "\e925";
+}
+
+.icon-book_online:before {
+    content: "\e926";
+}
+
+.icon-clean_hands:before {
+    content: "\e927";
 }
 
 .icon-follow_the_signs:before {
+    content: "\e928";
+}
+
+.icon-xiiber:before {
+    content: "\e929";
+}
+
+.icon-date_range_black_24dp:before {
+    content: "\e92a";
+}
+
+.icon-home_black_24dp:before {
+    content: "\e92b";
+}
+
+.icon-local_activity_black_24dp:before {
+    content: "\e92c";
+}
+
+.icon-luggage_black_24dp:before {
+    content: "\e92d";
+}
+
+.icon-notifications_black_24dp:before {
+    content: "\e92e";
+}
+
+.icon-pokebola-24px:before {
+    content: "\e92f";
+}
+
+.icon-alertas:before {
+    content: "\e930";
+}
+
+.icon-calendario:before {
+    content: "\e931";
+}
+
+.icon-elipsis:before {
+    content: "\e932";
+}
+
+.icon-elipsix .path1:before {
+    content: "\e933";
+    color: rgb(0, 0, 0);
+}
+
+.icon-elipsix .path2:before {
+    content: "\e934";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.icon-experiencias:before {
+    content: "\e935";
+}
+
+.icon-home:before {
+    content: "\e936";
+}
+
+.icon-ico .path1:before {
+    content: "\e937";
+    color: rgb(32, 30, 30);
+}
+
+.icon-ico .path2:before {
+    content: "\e938";
+    margin-left: -1em;
+    color: rgb(32, 30, 30);
+}
+
+.icon-notificaciones:before {
+    content: "\e939";
+}
+
+.icon-playa:before {
+    content: "\e93a";
+}
+
+.icon-poppers:before {
+    content: "\e93b";
+}
+
+.icon-sexoral-1:before {
+    content: "\e93c";
+}
+
+.icon-verga-1:before {
+    content: "\e93d";
+}
+
+.icon-viajes:before {
+    content: "\e93e";
+}
+
+.icon-xiiber-circular:before {
+    content: "\e93f";
+}
+
+.icon-xiiber-one .path1:before {
+    content: "\e940";
+    color: rgb(0, 53, 108);
+}
+
+.icon-xiiber-one .path2:before {
+    content: "\e941";
+    margin-left: -1em;
+    color: rgb(254, 254, 254);
+}
+
+.icon-xiiber-one .path3:before {
+    content: "\e942";
+    margin-left: -1em;
+    color: rgb(254, 254, 254);
+}
+
+.icon-xiiber-simple:before {
     content: "\e943";
+    color: #000;
 }
