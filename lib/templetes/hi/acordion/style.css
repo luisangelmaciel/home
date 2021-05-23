@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #fff;
+    --color-yellow: #FFC400;
+    --color-black: #000;
+    --color-grey-light: #E8E8E8;
+    --color-grey: #30353E;
+}
+
+.font-title {
+    font-family: "Roboto", 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+}
+
+.font-body {
+    font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: var(--color-grey);
+}
+
+body {
+    padding: 40px 20px;
+    font-family: "Roboto", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: var(--color-grey);
+}
+
+.list_accordion {
+    --row-gap: 35;
+    --orb-gap: 20;
+    --orb-sz: 28;
+    max-width: 645px;
+    margin: 0 auto;
+}
+
+.list_accordion__item {
+    transition: margin-bottom 0.15s linear;
+    margin-bottom: calc(var(--row-gap) * 1px);
+}
+
+.list_accordion__item-title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-family: Montserrat Alternates;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: left;
+    color: var(--color-black);
+    margin-bottom: 0.7em;
+    cursor: pointer;
+    position: relative;
+    padding-left: calc((var(--orb-sz) + var(--orb-gap)) * 1px);
+    outline: none;
+    list-style: none;
+}
+
+.list_accordion__item-title::-webkit-details-marker {
+    display: none;
+}
+
+body.using-keyboard .list_accordion__item-title:focus {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: grey;
+}
+
+.list_accordion__item-title:before {
+    --orb-color: var(--color-white);
+    --orb-bg: var(--color-yellow);
+    --orb-stroke: var(--color-yellow);
+    --orb-stroke-w: 12px;
+    --orb-stroke-h: 2px;
+    content: '';
+    display: block;
+    z-index: 2;
+    position: absolute;
+    width: calc(var(--orb-sz) * 1px);
+    height: calc(var(--orb-sz) * 1px);
+    top: 0.1em;
+    left: 0;
+    border: 2px solid var(--orb-stroke);
+    border-radius: 50%;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--orb-bg);
+    background-image: linear-gradient(to right, var(--orb-color), var(--orb-color)), linear-gradient(to right, var(--orb-color), var(--orb-color));
+    background-size: var(--orb-stroke-w) var(--orb-stroke-h), var(--orb-stroke-h) var(--orb-stroke-w);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+details[open] .list_accordion__item-title:before {
+    --orb-color: var(--color-black);
+    --orb-bg: var(--color-white);
+    background-size: var(--orb-stroke-w) var(--orb-stroke-h), 0px 0px;
+}
+
+.list_accordion__item-description {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 30px;
+}
+
+.list_accordion__item-description strong {
+    font-weight: bold;
+}
