@@ -3,7 +3,7 @@
     src: url('https://www.xiiber.com/lib/fonts/xiibicon.eot?61ntko');
     src: url('https://www.xiiber.com/lib/fonts/xiibicon.eot?61ntko#iefix') format('embedded-opentype'), url('https://www.xiiber.com/lib/fonts/xiibicon.ttf?61ntko') format('truetype'), url('https://www.xiiber.com/lib/fonts/xiibicon.woff?61ntko') format('woff'), url('https://www.xiiber.com/lib/fonts/xiibicon.svg?61ntko#xiibicon') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: 30px;
     font-display: block;
 }
 
@@ -6231,37 +6231,6 @@
     content: "\e92f";
 }
 
-.icon-alertas1:before {
-    content: "\e930";
-}
-
-.icon-calendario1:before {
-    content: "\e931";
-}
-
-.icon-elipsis1:before {
-    content: "\e932";
-}
-
-.icon-elipsix1 .path1:before {
-    content: "\e933";
-    color: rgb(0, 0, 0);
-}
-
-.icon-elipsix1 .path2:before {
-    content: "\e934";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
-}
-
-.icon-experiencias1:before {
-    content: "\e935";
-}
-
-.icon-home1:before {
-    content: "\e936";
-}
-
 .icon-ico .path1:before {
     content: "\e937";
     color: rgb(32, 30, 30);
@@ -6291,10 +6260,6 @@
 
 .icon-verga-1:before {
     content: "\e93d";
-}
-
-.icon-viajes1:before {
-    content: "\e93e";
 }
 
 .icon-xiiber-circular:before {
