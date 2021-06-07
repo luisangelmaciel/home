@@ -1,0 +1,52 @@
+{
+    "theme_color": "#e3f635",
+    "background_color": "#f69435",
+    "display": "standalone",
+    "scope": "/home",
+    "start_url": "/index.html",
+    "name": "Xiiber Travel",
+    "short_name": "Xiiber",
+    "description": "Viajes en grupo para hombres gay, viajes gay, agencia de viajes gay, viajes gay mexico, viajes en pareja gay",
+    "icons": [{
+            "src": "img/icons/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icons/maskable_icon.png",
+            "sizes": "114x114",
+            "type": "image/png",
+            "purpose": "any maskable "
+        }
+    ]
+}

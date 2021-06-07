@@ -10,21 +10,66 @@
        »  http://twitter.com/XiiberTravel    
 -->
 
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE 
+HTTP/1.1 200 OK
+Content-Type: text/html>
+
+<html lang="es-MX" Content-Type="text/html" Content-Security-Policy="img-src" icons.example.com>
+
 <title>Destinos | Viajes gay Xiiber</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name=" description " content="Xiiber, experiencias y viajes gay en México. Puedes viajar solo, con amigos, el novio, amante, con quien quieras. El objetivo es que la pases bien a tu manera, que disfrutes el tiempo para consentirte, conocer lugares
+    y personas nuevas. ¿Listo? Agarra tu maleta y vámonos de viaje. ">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://www.xiiber.com">
+<script src="main.js"></script>
+<script src="scripts.js"></script>
+<script src="sw.js"></script>
+
+
+<link rel="stylesheet " href="https://www.w3schools.com/w3css/4/w3.css ">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#990099">
+
+<script async src="pwacompat.min.js"></script>
+<link rel="manifest" href="manifest.webmanifest" />
+<script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
+
+
+
+<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+<meta name="mobile-web-app-capable " content="yes " />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable " content="yes " />
+<meta name="application-name " content="Xiiber Travel " />
+<meta name="apple-mobile-web-app-title " content="Xiiber Travel " />
+<meta name="msapplication-starturl " content="https://hiluisxiib.github.io/home/index.html " />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="referrer" content="always" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon " type="image/png " sizes="128x128 " purpose="any " href="img/icons/icon-128x128.png ">
+<link rel="icon " type="image/png " sizes="144x144 " href="img/icons/icon-144x144.png ">
+<link rel="icon " type="image/png " sizes="152x152 " href="img/icons/icon-152x152.png ">
+<link rel="icon " type="image/png " sizes="512x512 " href="img/icons/icon-512x512.png ">
+<link rel="icon " type="image/png " sizes="192x192 " href="img/icons/icon-192x192.png ">
+<link rel="icon " type="image/png " sizes="256x256 " href="img/icons/icon-256x256.png ">
+<link rel="icon " type="image/png " sizes="64x64" href="img/icons/icon-64x64.png ">
+
+<link rel="icon " href="images/icons/maskable_icon.png " sizes="114x114 " type="image/png " purpose="any maskable ">
+
 
 <link rel="preconnect " href="https://fonts.gstatic.com ">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap " rel="stylesheet ">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
-<link href="https://www.xiiber.com/lib/fonts/xiibicon.woff" rel="stylesheet ">
-<link href="css/xiibicon.css" rel="stylesheet ">
+<link href="https://www.xiiber.com/lib/fonts/xiibicon.woff " rel="stylesheet ">
+<link href="css/xiibicon.css " rel="stylesheet ">
+
 <link rel=" icon " href="https://www.xiiber.com/favicon.png " sizes="192x192 ">
-<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js "></script>
+
 
 <style>
     body {
@@ -329,10 +374,10 @@
 
 <!-- Page content -->
 <div class="w3-content " style="max-width:2000px;margin-top:46px ">
-    <p w3-include-html="viajes2021.html "></p> 
+    <p w3-include-html="viajes2021.html "></p>
 
     <script>
-    w3.includeHTML();
+        w3.includeHTML();
     </script>
 
 
@@ -386,7 +431,7 @@
                 </div>
             </a>
             <div class='openEv'>
-    
+
                 <b>Hora:</b> 19:30 hrs</br>
                 <b>Lugar:</b> CDMX, Zona Oriente. Ver mapa</br>
                 <b>Descripción:</b> Pizza & Beer House - Home </span>
@@ -406,19 +451,19 @@
                 </div>
             </a>
             <div class='openEv'>
-    
+
                 <b>Hora:</b> 19:30 hrs</br>
                 <b>Lugar:</b> CDMX, Zona Oriente. Ver mapa</br>
                 <b>Descripción:</b> Pizza & Beer House - Home </span>
                 <b>Precio:</b> $140 </span>
             </div>
             <div class="spacer "></div>
-    
-    
+
+
         </div>
     </div>
 
-    
+
 </div>
 <!--fin viajes -->
 </div>
@@ -459,6 +504,12 @@
             $(this).next().toggleClass('open');
         })
     })
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  // sw.js can literally be empty, but must exist
+  navigator.serviceWorker.register('/sw.js');
+}
 </script>
 
 </body>
