@@ -25,6 +25,7 @@ Content-Type: text/html>
 <script src="main.js"></script>
 <script src="scripts.js"></script>
 <script src="sw.js"></script>
+<script src="preloader.js"></script>
 
 
 <link rel="stylesheet " href="https://www.w3schools.com/w3css/4/w3.css ">
@@ -352,7 +353,47 @@ Content-Type: text/html>
 
 <body>
 
+    <div id="preloder">
 
+        <div class="loader ">
+            <div id="LOADER" class="w3-container">
+                <script src="preloader.js"></script>
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                <style>
+                    .mySlidesLoader {
+                        display: none;
+                    }
+                </style>
+
+                <div class="w3-content w3-section" style="max-width:100px">
+                    <img class="mySlidesLoader " src="svg/cgtravel.svg" style="width:100%">
+                    <img class="mySlidesLoader " src="svg/experiencias.svg" style="width:100%">
+                    <img class="mySlidesLoader " src="svg/playa.svg" style="width:100%">
+                    <img class="mySlidesLoader " src="svg/viajes.svg" style="width:100%">
+                </div>
+
+                <script>
+                    var myIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlidesLoader");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        myIndex++;
+                        if (myIndex > x.length) {
+                            myIndex = 1
+                        }
+                        x[myIndex - 1].style.display = "block";
+                        setTimeout(carousel, 500);
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Navbar -->
     <a onclick="document.getElementById( 'ticketModal').style.display='block' "><img src="https://www.xiiber.com/sgv/elipsis.webp " class="w3-hover-opacity " alt="Xiiber Travel " width="33w " height="33w " title="Viajes Xiiber " style="position:fixed;top:60px;right:40px; "></a>
@@ -413,9 +454,6 @@ Content-Type: text/html>
 
 
 
-
-
-
 </div>
 <!--fin viajes -->
 </div>
@@ -424,48 +462,48 @@ Content-Type: text/html>
 
 
 <div class="w3-center w3-hover-opacity ">
-    <p> <b style="font-family: 'Montserrat Alternates', sans-serif; font-size: 18px; color:grey; text-align: center; ">xiiber  </p>
+    <p> <b style="font-family: 'Montserrat Alternates', sans-serif; font-size: 18px; color:grey; text-align: center; ">xiiber</b>  </p>
     <br><br><br></div>
-<!-- Footerx -->
-<div class="footerx ">
-    <div class="icon-bar ">
-        <a onclick="document.location='https://www.xiiber.com ' "><img src="https://www.xiiber.com/sgv/home.webp " alt="Home " height="33w " width="33w " >
-            <p style="color: grey; font-size: small; text-align: center; " class="w3-hover-opacity " >Inicio</p>
-        </a>
-        <a onclick="document.location='https://www.xiiber.com/notificaciones.html ' "><img src="https://www.xiiber.com/sgv/notificaciones.webp " alt="Notificaciones " height="33w " width="33w " class="w3-hover-opacity ">
-            <p style="color: grey; font-size: small; text-align: center; ">Notificaciones</p>
-        </a>
-        <a onclick="document.location='https://www.xiiber.com/viajes.html ' "><img src="https://www.xiiber.com/sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
-            <p style="color: grey; font-size: small; text-align: center; ">Viajes</p>
-        </a>
-        <a onclick="document.location='https://www.xiiber.com/experiencias ' "><img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Experiencias " height="33w " width="33w " class="w3-hover-opacity ">
-            <p style="color: grey; font-size: small; text-align: center; ">Experiencias</p>
-        </a>
-        <a onclick="document.location='https://www.xiiber.com/2021/2021.html ' "><img src="https://www.xiiber.com/sgv/calendario.webp " alt="Calendario " height="33w " width="33w " class="w3-hover-opacity ">
-            <p style="color: grey; font-size: small; text-align: center; ">Calendario</p </a>
-    </div>
-</div>
+        <p> <b style="color:grey; text-align: center; " class=" w3-hide-small "> </p>
+            <br><br><br></div>
+        <!-- Footerx -->
+        <div class="footerx ">
+            <div class="icon-bar ">
+                <a onclick="document.location='https://www.xiiber.com ' "><img src="https://www.xiiber.com/sgv/home.webp " alt="Home " height="33w " width="33w ">
+                    <p style="color: grey; font-size: small; text-align: center; " class="w3-hover-opacity ">Inicio</p>
+                </a>
+                <a onclick="document.location='https://www.xiiber.com/notificaciones.html ' "><img src="https://www.xiiber.com/sgv/notificaciones.webp " alt="Notificaciones " height="33w " width="33w " class="w3-hover-opacity ">
+                    <p style="color: grey; font-size: small; text-align: center; ">Notificaciones</p>
+                </a>
+                <a onclick="document.location='https://www.xiiber.com/viajes.html ' "><img src="https://www.xiiber.com/sgv/viajes.webp " alt="Viajes " height="33w " width="33w " class="w3-hover-opacity ">
+                    <p style="color: grey; font-size: small; text-align: center; ">Viajes</p>
+                </a>
+                <a onclick="document.location='https://www.xiiber.com/experiencias ' "><img src="https://www.xiiber.com/sgv/experiencias.webp " alt="Experiencias " height="33w " width="33w " class="w3-hover-opacity ">
+                    <p style="color: grey; font-size: small; text-align: center; ">Experiencias</p>
+                </a>
+                <a onclick="document.location='https://www.xiiber.com/2021/2021.html ' "><img src="https://www.xiiber.com/sgv/calendario.webp " alt="Calendario " height="33w " width="33w " class="w3-hover-opacity ">
+                    <p style="color: grey; font-size: small; text-align: center; ">Calendario</p </a>
+            </div>
+        </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script>
-    // $ Xiiber Travel
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script>
+            // $ Xiiber Travel
 
-    $(function() {
-        $('.event-list').find('.event').click(function() {
-            $('.event-list').find('.openEv').removeClass('open');
-            $(this).next().toggleClass('open');
-        })
-    })
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  // sw.js can literally be empty, but must exist
-  navigator.serviceWorker.register('/sw.js');
-}
-</script>
+            $(function() {
+                $('.event-list').find('.event').click(function() {
+                    $('.event-list').find('.openEv').removeClass('open');
+                    $(this).next().toggleClass('open');
+                })
+            })
+        </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                // sw.js can literally be empty, but must exist
+                navigator.serviceWorker.register('/sw.js');
+            }
+        </script>
 
 </body>
-
-</html>
 
 </html>
